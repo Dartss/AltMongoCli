@@ -24,11 +24,9 @@ import static com.mongodb.client.model.Filters.*;
  * Also retrieves 'target' and 'projections'.
  * All retrieved data puts into {@code ParsedSQLStatement} object
  *
- * !!!Warning. In current version, it can parse statements of equality
- * of string values only in order such order : "<column_name> == || != <string_value>"
- * if swap <string_value> and <column_name> parser will not recognize this condition.
- *
- *
+ * !!!Warning. In current version, it can parse equality ONLY
+ * of string values that are wrapped with '"' for example:
+ * select * from name == '"'Dima'"'   : here name - is column name and '"'Dima'"' - string value
  *
  */
 public class SelectStmtParser implements SQLStatementParser {
@@ -85,11 +83,14 @@ public class SelectStmtParser implements SQLStatementParser {
                 if (expr.literal_value() != null) {
                     expression = Double.valueOf(expr.literal_value().getText());
                 }
+
+                if (expr.STRING_VALUE()!= null) {
+                    String s = expr.STRING_VALUE().getText();
+                    expression = s.replace("\"", "");
+                }
             }
-            if (expression == null) expression = exprContext.expr(1).getText();
 
             operator = exprContext.comparing_operators().getText();
-
             b.add(getBsonByOperator(operator, columnName, expression));
         } else {
             List<Bson> sq = new ArrayList<>();
@@ -148,6 +149,7 @@ public class SelectStmtParser implements SQLStatementParser {
             //condition
             SQLite2Parser.ExprContext conditions = ctx.select_or_values(0).expr(0);
             List<Bson> query = getConditions(conditions);
+            System.out.println("Query : " + query);
 
             //projections
             List<String> projections = null;
@@ -162,4 +164,3 @@ public class SelectStmtParser implements SQLStatementParser {
         }
     }
 }
-//select * from customers where age > 5 and (name == 'Dima' or name != 'Ivan')

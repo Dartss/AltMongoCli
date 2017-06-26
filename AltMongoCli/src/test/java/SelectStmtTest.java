@@ -77,21 +77,21 @@ public class SelectStmtTest {
 
     @Test
     public void testSelectSimpleCompoundConditionAnd() {
-        List<String> r = shell.select("* from "+testCollectionName + " where age < 40 and name != Ivan");
+        List<String> r = shell.select("* from "+testCollectionName + " where age < 40 and name != \"Ivan\"");
 
         assertEquals(Arrays.asList(dima.toString()), r);
     }
 
     @Test
     public void testSelectSimpleCompoundConditionOr() {
-        List<String> r = shell.select("* from "+testCollectionName + " where age >= 25 or name == Ivan");
+        List<String> r = shell.select("* from "+testCollectionName + " where age >= 25 or name == \"Ivan\"");
 
         assertEquals(Arrays.asList(dima.toString(), stepan.toString(), ivan.toString()), r);
     }
 
     @Test
     public void testSelectCompoundCondition() {
-        List<String> r = shell.select("* from "+testCollectionName + " where (age > 18 or name == Ivan) and (credit_card.name = Visa or credit_card.name = Master Card)");
+        List<String> r = shell.select("* from "+testCollectionName + " where (age > 18 or name == \"Ivan\") and (credit_card.name = \"Visa\" or credit_card.name = \"Master Card\")");
 
         assertEquals(Arrays.asList(dima.toString(), stepan.toString(), ivan.toString()), r);
     }
