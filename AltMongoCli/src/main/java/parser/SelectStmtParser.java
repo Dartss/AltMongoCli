@@ -1,8 +1,8 @@
 package parser;
 
-import parser.antlr.SQLite2BaseListener;
-import parser.antlr.SQLite2Lexer;
-import parser.antlr.SQLite2Parser;
+import parser.antlr.SQLRulesBaseListener;
+import parser.antlr.SQLRulesLexer;
+import parser.antlr.SQLRulesParser;
 import model.ParsedSQLStatement;
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CharStream;
@@ -48,9 +48,9 @@ public class SelectStmtParser implements SQLStatementParser {
     public ParsedSQLStatement parse(String statement) {
         //initiation of lexer
         CharStream in = new ANTLRInputStream(statement);
-        SQLite2Lexer lexer = new SQLite2Lexer(in);
+        SQLRulesLexer lexer = new SQLRulesLexer(in);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
-        SQLite2Parser parser = new SQLite2Parser(tokens);
+        SQLRulesParser parser = new SQLRulesParser(tokens);
 
         ParseTree tree = parser.select_stmt();
 
@@ -61,7 +61,7 @@ public class SelectStmtParser implements SQLStatementParser {
         return parsedSQLStatement;
     }
 
-    private List<Bson> getConditions(SQLite2Parser.ExprContext conditions) {
+    private List<Bson> getConditions(SQLRulesParser.ExprContext conditions) {
         List<Bson> query = null;
         if (conditions != null) {
             query = parseConditions(conditions);
@@ -69,14 +69,14 @@ public class SelectStmtParser implements SQLStatementParser {
         return query;
     }
 
-    private List<Bson> parseConditions(SQLite2Parser.ExprContext exprContext)
+    private List<Bson> parseConditions(SQLRulesParser.ExprContext exprContext)
     {
         List<Bson> b = new ArrayList<>();
         if (exprContext.comparing_operators() != null) {
             String columnName = null;
             String operator = null;
             Object expression = null;
-            for (SQLite2Parser.ExprContext expr : exprContext.expr()) {
+            for (SQLRulesParser.ExprContext expr : exprContext.expr()) {
                 if (expr.target_name() != null && columnName == null)
                     columnName = expr.target_name().getText();
 
@@ -117,7 +117,7 @@ public class SelectStmtParser implements SQLStatementParser {
     private Bson getBsonByOperator(String operator, String columnName, Object expression) {
         Bson query = null;
         switch (operator) {
-            case ("=="):
+            case ("="):
                 query = eq(columnName, expression);
                 break;
             case ("!="):
@@ -139,15 +139,15 @@ public class SelectStmtParser implements SQLStatementParser {
         return query;
     }
 
-    class SQLParserHelper extends SQLite2BaseListener {
+    class SQLParserHelper extends SQLRulesBaseListener {
 
         @Override
-        public void enterSelect_stmt(@NotNull SQLite2Parser.Select_stmtContext ctx) {
+        public void enterSelect_stmt(@NotNull SQLRulesParser.Select_stmtContext ctx) {
             //table
             String targetName = ctx.select_or_values(0).table_or_subquery().get(0).getText();
 
             //condition
-            SQLite2Parser.ExprContext conditions = ctx.select_or_values(0).expr(0);
+            SQLRulesParser.ExprContext conditions = ctx.select_or_values(0).expr(0);
             List<Bson> query = getConditions(conditions);
             System.out.println("Query : " + query);
 
@@ -155,7 +155,7 @@ public class SelectStmtParser implements SQLStatementParser {
             List<String> projections = null;
             if (ctx.select_or_values(0).result_column() != null) {
                 projections = new ArrayList<>();
-                for (SQLite2Parser.Result_columnContext rc : ctx.select_or_values(0).result_column()) {
+                for (SQLRulesParser.Result_columnContext rc : ctx.select_or_values(0).result_column()) {
                     projections.add(rc.getText());
                 }
             }

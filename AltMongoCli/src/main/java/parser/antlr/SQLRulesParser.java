@@ -1,12 +1,15 @@
-package parser.antlr;// Generated from SQLite2.g4 by ANTLR 4.2.2
+package parser.antlr;// Generated from SQLRules.g4 by ANTLR 4.2.2
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
+import org.antlr.v4.runtime.misc.*;
 import org.antlr.v4.runtime.tree.*;
 import java.util.List;
+import java.util.Iterator;
+import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
-public class SQLite2Parser extends Parser {
+public class SQLRulesParser extends Parser {
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
@@ -115,7 +118,7 @@ public class SQLite2Parser extends Parser {
 	};
 
 	@Override
-	public String getGrammarFileName() { return "SQLite2.g4"; }
+	public String getGrammarFileName() { return "SQLRules.g4"; }
 
 	@Override
 	public String[] getTokenNames() { return tokenNames; }
@@ -129,7 +132,7 @@ public class SQLite2Parser extends Parser {
 	@Override
 	public ATN getATN() { return _ATN; }
 
-	public SQLite2Parser(TokenStream input) {
+	public SQLRulesParser(TokenStream input) {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
@@ -143,7 +146,7 @@ public class SQLite2Parser extends Parser {
 		public Sql_stmt_listContext sql_stmt_list(int i) {
 			return getRuleContext(Sql_stmt_listContext.class,i);
 		}
-		public TerminalNode EOF() { return getToken(SQLite2Parser.EOF, 0); }
+		public TerminalNode EOF() { return getToken(SQLRulesParser.EOF, 0); }
 		public List<ErrorContext> error() {
 			return getRuleContexts(ErrorContext.class);
 		}
@@ -153,11 +156,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_parse; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterParse(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterParse(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitParse(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitParse(this);
 		}
 	}
 
@@ -232,18 +235,18 @@ public class SQLite2Parser extends Parser {
 
 	public static class ErrorContext extends ParserRuleContext {
 		public Token UNEXPECTED_CHAR;
-		public TerminalNode UNEXPECTED_CHAR() { return getToken(SQLite2Parser.UNEXPECTED_CHAR, 0); }
+		public TerminalNode UNEXPECTED_CHAR() { return getToken(SQLRulesParser.UNEXPECTED_CHAR, 0); }
 		public ErrorContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_error; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterError(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterError(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitError(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitError(this);
 		}
 	}
 
@@ -283,11 +286,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_sql_stmt_list; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterSql_stmt_list(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterSql_stmt_list(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitSql_stmt_list(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitSql_stmt_list(this);
 		}
 	}
 
@@ -388,11 +391,11 @@ public class SQLite2Parser extends Parser {
 		public Create_index_stmtContext create_index_stmt() {
 			return getRuleContext(Create_index_stmtContext.class,0);
 		}
-		public TerminalNode K_EXPLAIN() { return getToken(SQLite2Parser.K_EXPLAIN, 0); }
+		public TerminalNode K_EXPLAIN() { return getToken(SQLRulesParser.K_EXPLAIN, 0); }
 		public Reindex_stmtContext reindex_stmt() {
 			return getRuleContext(Reindex_stmtContext.class,0);
 		}
-		public TerminalNode K_QUERY() { return getToken(SQLite2Parser.K_QUERY, 0); }
+		public TerminalNode K_QUERY() { return getToken(SQLRulesParser.K_QUERY, 0); }
 		public Detach_stmtContext detach_stmt() {
 			return getRuleContext(Detach_stmtContext.class,0);
 		}
@@ -432,7 +435,7 @@ public class SQLite2Parser extends Parser {
 		public Drop_index_stmtContext drop_index_stmt() {
 			return getRuleContext(Drop_index_stmtContext.class,0);
 		}
-		public TerminalNode K_PLAN() { return getToken(SQLite2Parser.K_PLAN, 0); }
+		public TerminalNode K_PLAN() { return getToken(SQLRulesParser.K_PLAN, 0); }
 		public Drop_trigger_stmtContext drop_trigger_stmt() {
 			return getRuleContext(Drop_trigger_stmtContext.class,0);
 		}
@@ -469,11 +472,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_sql_stmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterSql_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterSql_stmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitSql_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitSql_stmt(this);
 		}
 	}
 
@@ -697,14 +700,14 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Alter_table_stmtContext extends ParserRuleContext {
-		public TerminalNode K_RENAME() { return getToken(SQLite2Parser.K_RENAME, 0); }
-		public TerminalNode K_ALTER() { return getToken(SQLite2Parser.K_ALTER, 0); }
-		public TerminalNode K_TABLE() { return getToken(SQLite2Parser.K_TABLE, 0); }
+		public TerminalNode K_RENAME() { return getToken(SQLRulesParser.K_RENAME, 0); }
+		public TerminalNode K_ALTER() { return getToken(SQLRulesParser.K_ALTER, 0); }
+		public TerminalNode K_TABLE() { return getToken(SQLRulesParser.K_TABLE, 0); }
 		public Table_nameContext table_name() {
 			return getRuleContext(Table_nameContext.class,0);
 		}
-		public TerminalNode K_COLUMN() { return getToken(SQLite2Parser.K_COLUMN, 0); }
-		public TerminalNode K_TO() { return getToken(SQLite2Parser.K_TO, 0); }
+		public TerminalNode K_COLUMN() { return getToken(SQLRulesParser.K_COLUMN, 0); }
+		public TerminalNode K_TO() { return getToken(SQLRulesParser.K_TO, 0); }
 		public New_table_nameContext new_table_name() {
 			return getRuleContext(New_table_nameContext.class,0);
 		}
@@ -714,18 +717,18 @@ public class SQLite2Parser extends Parser {
 		public Column_defContext column_def() {
 			return getRuleContext(Column_defContext.class,0);
 		}
-		public TerminalNode K_ADD() { return getToken(SQLite2Parser.K_ADD, 0); }
+		public TerminalNode K_ADD() { return getToken(SQLRulesParser.K_ADD, 0); }
 		public Alter_table_stmtContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_alter_table_stmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterAlter_table_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterAlter_table_stmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitAlter_table_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitAlter_table_stmt(this);
 		}
 	}
 
@@ -788,7 +791,7 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Analyze_stmtContext extends ParserRuleContext {
-		public TerminalNode K_ANALYZE() { return getToken(SQLite2Parser.K_ANALYZE, 0); }
+		public TerminalNode K_ANALYZE() { return getToken(SQLRulesParser.K_ANALYZE, 0); }
 		public Table_or_index_nameContext table_or_index_name() {
 			return getRuleContext(Table_or_index_nameContext.class,0);
 		}
@@ -801,11 +804,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_analyze_stmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterAnalyze_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterAnalyze_stmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitAnalyze_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitAnalyze_stmt(this);
 		}
 	}
 
@@ -852,12 +855,12 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Attach_stmtContext extends ParserRuleContext {
-		public TerminalNode K_AS() { return getToken(SQLite2Parser.K_AS, 0); }
-		public TerminalNode K_DATABASE() { return getToken(SQLite2Parser.K_DATABASE, 0); }
+		public TerminalNode K_AS() { return getToken(SQLRulesParser.K_AS, 0); }
+		public TerminalNode K_DATABASE() { return getToken(SQLRulesParser.K_DATABASE, 0); }
 		public ExprContext expr() {
 			return getRuleContext(ExprContext.class,0);
 		}
-		public TerminalNode K_ATTACH() { return getToken(SQLite2Parser.K_ATTACH, 0); }
+		public TerminalNode K_ATTACH() { return getToken(SQLRulesParser.K_ATTACH, 0); }
 		public Database_nameContext database_name() {
 			return getRuleContext(Database_nameContext.class,0);
 		}
@@ -867,11 +870,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_attach_stmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterAttach_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterAttach_stmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitAttach_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitAttach_stmt(this);
 		}
 	}
 
@@ -907,25 +910,25 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Begin_stmtContext extends ParserRuleContext {
-		public TerminalNode K_EXCLUSIVE() { return getToken(SQLite2Parser.K_EXCLUSIVE, 0); }
+		public TerminalNode K_EXCLUSIVE() { return getToken(SQLRulesParser.K_EXCLUSIVE, 0); }
 		public Transaction_nameContext transaction_name() {
 			return getRuleContext(Transaction_nameContext.class,0);
 		}
-		public TerminalNode K_BEGIN() { return getToken(SQLite2Parser.K_BEGIN, 0); }
-		public TerminalNode K_DEFERRED() { return getToken(SQLite2Parser.K_DEFERRED, 0); }
-		public TerminalNode K_TRANSACTION() { return getToken(SQLite2Parser.K_TRANSACTION, 0); }
-		public TerminalNode K_IMMEDIATE() { return getToken(SQLite2Parser.K_IMMEDIATE, 0); }
+		public TerminalNode K_BEGIN() { return getToken(SQLRulesParser.K_BEGIN, 0); }
+		public TerminalNode K_DEFERRED() { return getToken(SQLRulesParser.K_DEFERRED, 0); }
+		public TerminalNode K_TRANSACTION() { return getToken(SQLRulesParser.K_TRANSACTION, 0); }
+		public TerminalNode K_IMMEDIATE() { return getToken(SQLRulesParser.K_IMMEDIATE, 0); }
 		public Begin_stmtContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_begin_stmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterBegin_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterBegin_stmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitBegin_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitBegin_stmt(this);
 		}
 	}
 
@@ -983,20 +986,20 @@ public class SQLite2Parser extends Parser {
 		public Transaction_nameContext transaction_name() {
 			return getRuleContext(Transaction_nameContext.class,0);
 		}
-		public TerminalNode K_COMMIT() { return getToken(SQLite2Parser.K_COMMIT, 0); }
-		public TerminalNode K_END() { return getToken(SQLite2Parser.K_END, 0); }
-		public TerminalNode K_TRANSACTION() { return getToken(SQLite2Parser.K_TRANSACTION, 0); }
+		public TerminalNode K_COMMIT() { return getToken(SQLRulesParser.K_COMMIT, 0); }
+		public TerminalNode K_END() { return getToken(SQLRulesParser.K_END, 0); }
+		public TerminalNode K_TRANSACTION() { return getToken(SQLRulesParser.K_TRANSACTION, 0); }
 		public Commit_stmtContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_commit_stmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterCommit_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterCommit_stmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitCommit_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitCommit_stmt(this);
 		}
 	}
 
@@ -1044,10 +1047,10 @@ public class SQLite2Parser extends Parser {
 
 	public static class Compound_select_stmtContext extends ParserRuleContext {
 		public TerminalNode K_EXCEPT(int i) {
-			return getToken(SQLite2Parser.K_EXCEPT, i);
+			return getToken(SQLRulesParser.K_EXCEPT, i);
 		}
 		public TerminalNode K_ALL(int i) {
-			return getToken(SQLite2Parser.K_ALL, i);
+			return getToken(SQLRulesParser.K_ALL, i);
 		}
 		public List<Select_coreContext> select_core() {
 			return getRuleContexts(Select_coreContext.class);
@@ -1058,10 +1061,10 @@ public class SQLite2Parser extends Parser {
 		public ExprContext expr(int i) {
 			return getRuleContext(ExprContext.class,i);
 		}
-		public List<TerminalNode> K_INTERSECT() { return getTokens(SQLite2Parser.K_INTERSECT); }
-		public TerminalNode K_LIMIT() { return getToken(SQLite2Parser.K_LIMIT, 0); }
+		public List<TerminalNode> K_INTERSECT() { return getTokens(SQLRulesParser.K_INTERSECT); }
+		public TerminalNode K_LIMIT() { return getToken(SQLRulesParser.K_LIMIT, 0); }
 		public TerminalNode K_UNION(int i) {
-			return getToken(SQLite2Parser.K_UNION, i);
+			return getToken(SQLRulesParser.K_UNION, i);
 		}
 		public Select_coreContext select_core(int i) {
 			return getRuleContext(Select_coreContext.class,i);
@@ -1069,32 +1072,32 @@ public class SQLite2Parser extends Parser {
 		public Ordering_termContext ordering_term(int i) {
 			return getRuleContext(Ordering_termContext.class,i);
 		}
-		public List<TerminalNode> K_ALL() { return getTokens(SQLite2Parser.K_ALL); }
+		public List<TerminalNode> K_ALL() { return getTokens(SQLRulesParser.K_ALL); }
 		public List<ExprContext> expr() {
 			return getRuleContexts(ExprContext.class);
 		}
-		public TerminalNode K_ORDER() { return getToken(SQLite2Parser.K_ORDER, 0); }
+		public TerminalNode K_ORDER() { return getToken(SQLRulesParser.K_ORDER, 0); }
 		public With_clauseContext with_clause() {
 			return getRuleContext(With_clauseContext.class,0);
 		}
 		public TerminalNode K_INTERSECT(int i) {
-			return getToken(SQLite2Parser.K_INTERSECT, i);
+			return getToken(SQLRulesParser.K_INTERSECT, i);
 		}
-		public TerminalNode K_BY() { return getToken(SQLite2Parser.K_BY, 0); }
-		public List<TerminalNode> K_EXCEPT() { return getTokens(SQLite2Parser.K_EXCEPT); }
-		public List<TerminalNode> K_UNION() { return getTokens(SQLite2Parser.K_UNION); }
-		public TerminalNode K_OFFSET() { return getToken(SQLite2Parser.K_OFFSET, 0); }
+		public TerminalNode K_BY() { return getToken(SQLRulesParser.K_BY, 0); }
+		public List<TerminalNode> K_EXCEPT() { return getTokens(SQLRulesParser.K_EXCEPT); }
+		public List<TerminalNode> K_UNION() { return getTokens(SQLRulesParser.K_UNION); }
+		public TerminalNode K_OFFSET() { return getToken(SQLRulesParser.K_OFFSET, 0); }
 		public Compound_select_stmtContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_compound_select_stmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterCompound_select_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterCompound_select_stmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitCompound_select_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitCompound_select_stmt(this);
 		}
 	}
 
@@ -1219,26 +1222,26 @@ public class SQLite2Parser extends Parser {
 		public List<Indexed_columnContext> indexed_column() {
 			return getRuleContexts(Indexed_columnContext.class);
 		}
-		public TerminalNode K_IF() { return getToken(SQLite2Parser.K_IF, 0); }
-		public TerminalNode K_WHERE() { return getToken(SQLite2Parser.K_WHERE, 0); }
-		public TerminalNode K_EXISTS() { return getToken(SQLite2Parser.K_EXISTS, 0); }
-		public TerminalNode K_INDEX() { return getToken(SQLite2Parser.K_INDEX, 0); }
+		public TerminalNode K_IF() { return getToken(SQLRulesParser.K_IF, 0); }
+		public TerminalNode K_WHERE() { return getToken(SQLRulesParser.K_WHERE, 0); }
+		public TerminalNode K_EXISTS() { return getToken(SQLRulesParser.K_EXISTS, 0); }
+		public TerminalNode K_INDEX() { return getToken(SQLRulesParser.K_INDEX, 0); }
 		public Indexed_columnContext indexed_column(int i) {
 			return getRuleContext(Indexed_columnContext.class,i);
 		}
-		public TerminalNode K_ON() { return getToken(SQLite2Parser.K_ON, 0); }
+		public TerminalNode K_ON() { return getToken(SQLRulesParser.K_ON, 0); }
 		public ExprContext expr() {
 			return getRuleContext(ExprContext.class,0);
 		}
-		public TerminalNode K_CREATE() { return getToken(SQLite2Parser.K_CREATE, 0); }
+		public TerminalNode K_CREATE() { return getToken(SQLRulesParser.K_CREATE, 0); }
 		public Table_nameContext table_name() {
 			return getRuleContext(Table_nameContext.class,0);
 		}
 		public Index_nameContext index_name() {
 			return getRuleContext(Index_nameContext.class,0);
 		}
-		public TerminalNode K_UNIQUE() { return getToken(SQLite2Parser.K_UNIQUE, 0); }
-		public TerminalNode K_NOT() { return getToken(SQLite2Parser.K_NOT, 0); }
+		public TerminalNode K_UNIQUE() { return getToken(SQLRulesParser.K_UNIQUE, 0); }
+		public TerminalNode K_NOT() { return getToken(SQLRulesParser.K_NOT, 0); }
 		public Database_nameContext database_name() {
 			return getRuleContext(Database_nameContext.class,0);
 		}
@@ -1248,11 +1251,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_create_index_stmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterCreate_index_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterCreate_index_stmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitCreate_index_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitCreate_index_stmt(this);
 		}
 	}
 
@@ -1335,34 +1338,34 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Create_table_stmtContext extends ParserRuleContext {
-		public TerminalNode K_TABLE() { return getToken(SQLite2Parser.K_TABLE, 0); }
-		public TerminalNode K_IF() { return getToken(SQLite2Parser.K_IF, 0); }
+		public TerminalNode K_TABLE() { return getToken(SQLRulesParser.K_TABLE, 0); }
+		public TerminalNode K_IF() { return getToken(SQLRulesParser.K_IF, 0); }
 		public Table_constraintContext table_constraint(int i) {
 			return getRuleContext(Table_constraintContext.class,i);
 		}
-		public TerminalNode K_EXISTS() { return getToken(SQLite2Parser.K_EXISTS, 0); }
-		public TerminalNode K_TEMP() { return getToken(SQLite2Parser.K_TEMP, 0); }
-		public TerminalNode K_AS() { return getToken(SQLite2Parser.K_AS, 0); }
-		public TerminalNode K_CREATE() { return getToken(SQLite2Parser.K_CREATE, 0); }
+		public TerminalNode K_EXISTS() { return getToken(SQLRulesParser.K_EXISTS, 0); }
+		public TerminalNode K_TEMP() { return getToken(SQLRulesParser.K_TEMP, 0); }
+		public TerminalNode K_AS() { return getToken(SQLRulesParser.K_AS, 0); }
+		public TerminalNode K_CREATE() { return getToken(SQLRulesParser.K_CREATE, 0); }
 		public Table_nameContext table_name() {
 			return getRuleContext(Table_nameContext.class,0);
 		}
 		public List<Table_constraintContext> table_constraint() {
 			return getRuleContexts(Table_constraintContext.class);
 		}
-		public TerminalNode K_WITHOUT() { return getToken(SQLite2Parser.K_WITHOUT, 0); }
+		public TerminalNode K_WITHOUT() { return getToken(SQLRulesParser.K_WITHOUT, 0); }
 		public Column_defContext column_def(int i) {
 			return getRuleContext(Column_defContext.class,i);
 		}
-		public TerminalNode K_NOT() { return getToken(SQLite2Parser.K_NOT, 0); }
-		public TerminalNode IDENTIFIER() { return getToken(SQLite2Parser.IDENTIFIER, 0); }
+		public TerminalNode K_NOT() { return getToken(SQLRulesParser.K_NOT, 0); }
+		public TerminalNode IDENTIFIER() { return getToken(SQLRulesParser.IDENTIFIER, 0); }
 		public Select_stmtContext select_stmt() {
 			return getRuleContext(Select_stmtContext.class,0);
 		}
 		public Database_nameContext database_name() {
 			return getRuleContext(Database_nameContext.class,0);
 		}
-		public TerminalNode K_TEMPORARY() { return getToken(SQLite2Parser.K_TEMPORARY, 0); }
+		public TerminalNode K_TEMPORARY() { return getToken(SQLRulesParser.K_TEMPORARY, 0); }
 		public List<Column_defContext> column_def() {
 			return getRuleContexts(Column_defContext.class);
 		}
@@ -1372,11 +1375,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_create_table_stmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterCreate_table_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterCreate_table_stmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitCreate_table_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitCreate_table_stmt(this);
 		}
 	}
 
@@ -1494,14 +1497,14 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Create_trigger_stmtContext extends ParserRuleContext {
-		public TerminalNode K_INSERT() { return getToken(SQLite2Parser.K_INSERT, 0); }
+		public TerminalNode K_INSERT() { return getToken(SQLRulesParser.K_INSERT, 0); }
 		public Trigger_nameContext trigger_name() {
 			return getRuleContext(Trigger_nameContext.class,0);
 		}
-		public TerminalNode K_EXISTS() { return getToken(SQLite2Parser.K_EXISTS, 0); }
-		public TerminalNode K_DELETE() { return getToken(SQLite2Parser.K_DELETE, 0); }
-		public TerminalNode K_TEMP() { return getToken(SQLite2Parser.K_TEMP, 0); }
-		public TerminalNode K_INSTEAD() { return getToken(SQLite2Parser.K_INSTEAD, 0); }
+		public TerminalNode K_EXISTS() { return getToken(SQLRulesParser.K_EXISTS, 0); }
+		public TerminalNode K_DELETE() { return getToken(SQLRulesParser.K_DELETE, 0); }
+		public TerminalNode K_TEMP() { return getToken(SQLRulesParser.K_TEMP, 0); }
+		public TerminalNode K_INSTEAD() { return getToken(SQLRulesParser.K_INSTEAD, 0); }
 		public Delete_stmtContext delete_stmt(int i) {
 			return getRuleContext(Delete_stmtContext.class,i);
 		}
@@ -1514,30 +1517,30 @@ public class SQLite2Parser extends Parser {
 		public Insert_stmtContext insert_stmt(int i) {
 			return getRuleContext(Insert_stmtContext.class,i);
 		}
-		public TerminalNode K_FOR() { return getToken(SQLite2Parser.K_FOR, 0); }
-		public TerminalNode K_WHEN() { return getToken(SQLite2Parser.K_WHEN, 0); }
+		public TerminalNode K_FOR() { return getToken(SQLRulesParser.K_FOR, 0); }
+		public TerminalNode K_WHEN() { return getToken(SQLRulesParser.K_WHEN, 0); }
 		public List<Delete_stmtContext> delete_stmt() {
 			return getRuleContexts(Delete_stmtContext.class);
 		}
 		public Database_nameContext database_name(int i) {
 			return getRuleContext(Database_nameContext.class,i);
 		}
-		public TerminalNode K_TEMPORARY() { return getToken(SQLite2Parser.K_TEMPORARY, 0); }
-		public TerminalNode K_BEFORE() { return getToken(SQLite2Parser.K_BEFORE, 0); }
-		public TerminalNode K_IF() { return getToken(SQLite2Parser.K_IF, 0); }
-		public TerminalNode K_AFTER() { return getToken(SQLite2Parser.K_AFTER, 0); }
+		public TerminalNode K_TEMPORARY() { return getToken(SQLRulesParser.K_TEMPORARY, 0); }
+		public TerminalNode K_BEFORE() { return getToken(SQLRulesParser.K_BEFORE, 0); }
+		public TerminalNode K_IF() { return getToken(SQLRulesParser.K_IF, 0); }
+		public TerminalNode K_AFTER() { return getToken(SQLRulesParser.K_AFTER, 0); }
 		public Select_stmtContext select_stmt(int i) {
 			return getRuleContext(Select_stmtContext.class,i);
 		}
-		public TerminalNode K_BEGIN() { return getToken(SQLite2Parser.K_BEGIN, 0); }
-		public List<TerminalNode> K_OF() { return getTokens(SQLite2Parser.K_OF); }
-		public TerminalNode K_EACH() { return getToken(SQLite2Parser.K_EACH, 0); }
-		public TerminalNode K_ROW() { return getToken(SQLite2Parser.K_ROW, 0); }
+		public TerminalNode K_BEGIN() { return getToken(SQLRulesParser.K_BEGIN, 0); }
+		public List<TerminalNode> K_OF() { return getTokens(SQLRulesParser.K_OF); }
+		public TerminalNode K_EACH() { return getToken(SQLRulesParser.K_EACH, 0); }
+		public TerminalNode K_ROW() { return getToken(SQLRulesParser.K_ROW, 0); }
 		public Update_stmtContext update_stmt(int i) {
 			return getRuleContext(Update_stmtContext.class,i);
 		}
 		public TerminalNode K_OF(int i) {
-			return getToken(SQLite2Parser.K_OF, i);
+			return getToken(SQLRulesParser.K_OF, i);
 		}
 		public Column_nameContext column_name(int i) {
 			return getRuleContext(Column_nameContext.class,i);
@@ -1545,35 +1548,35 @@ public class SQLite2Parser extends Parser {
 		public List<Update_stmtContext> update_stmt() {
 			return getRuleContexts(Update_stmtContext.class);
 		}
-		public TerminalNode K_ON() { return getToken(SQLite2Parser.K_ON, 0); }
+		public TerminalNode K_ON() { return getToken(SQLRulesParser.K_ON, 0); }
 		public ExprContext expr() {
 			return getRuleContext(ExprContext.class,0);
 		}
 		public List<Column_nameContext> column_name() {
 			return getRuleContexts(Column_nameContext.class);
 		}
-		public TerminalNode K_CREATE() { return getToken(SQLite2Parser.K_CREATE, 0); }
-		public TerminalNode K_UPDATE() { return getToken(SQLite2Parser.K_UPDATE, 0); }
-		public TerminalNode K_NOT() { return getToken(SQLite2Parser.K_NOT, 0); }
-		public TerminalNode K_END() { return getToken(SQLite2Parser.K_END, 0); }
+		public TerminalNode K_CREATE() { return getToken(SQLRulesParser.K_CREATE, 0); }
+		public TerminalNode K_UPDATE() { return getToken(SQLRulesParser.K_UPDATE, 0); }
+		public TerminalNode K_NOT() { return getToken(SQLRulesParser.K_NOT, 0); }
+		public TerminalNode K_END() { return getToken(SQLRulesParser.K_END, 0); }
 		public List<Database_nameContext> database_name() {
 			return getRuleContexts(Database_nameContext.class);
 		}
 		public List<Select_stmtContext> select_stmt() {
 			return getRuleContexts(Select_stmtContext.class);
 		}
-		public TerminalNode K_TRIGGER() { return getToken(SQLite2Parser.K_TRIGGER, 0); }
+		public TerminalNode K_TRIGGER() { return getToken(SQLRulesParser.K_TRIGGER, 0); }
 		public Create_trigger_stmtContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_create_trigger_stmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterCreate_trigger_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterCreate_trigger_stmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitCreate_trigger_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitCreate_trigger_stmt(this);
 		}
 	}
 
@@ -1772,34 +1775,34 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Create_view_stmtContext extends ParserRuleContext {
-		public TerminalNode K_AS() { return getToken(SQLite2Parser.K_AS, 0); }
-		public TerminalNode K_CREATE() { return getToken(SQLite2Parser.K_CREATE, 0); }
-		public TerminalNode K_IF() { return getToken(SQLite2Parser.K_IF, 0); }
+		public TerminalNode K_AS() { return getToken(SQLRulesParser.K_AS, 0); }
+		public TerminalNode K_CREATE() { return getToken(SQLRulesParser.K_CREATE, 0); }
+		public TerminalNode K_IF() { return getToken(SQLRulesParser.K_IF, 0); }
 		public View_nameContext view_name() {
 			return getRuleContext(View_nameContext.class,0);
 		}
-		public TerminalNode K_VIEW() { return getToken(SQLite2Parser.K_VIEW, 0); }
-		public TerminalNode K_EXISTS() { return getToken(SQLite2Parser.K_EXISTS, 0); }
-		public TerminalNode K_NOT() { return getToken(SQLite2Parser.K_NOT, 0); }
-		public TerminalNode K_TEMP() { return getToken(SQLite2Parser.K_TEMP, 0); }
+		public TerminalNode K_VIEW() { return getToken(SQLRulesParser.K_VIEW, 0); }
+		public TerminalNode K_EXISTS() { return getToken(SQLRulesParser.K_EXISTS, 0); }
+		public TerminalNode K_NOT() { return getToken(SQLRulesParser.K_NOT, 0); }
+		public TerminalNode K_TEMP() { return getToken(SQLRulesParser.K_TEMP, 0); }
 		public Select_stmtContext select_stmt() {
 			return getRuleContext(Select_stmtContext.class,0);
 		}
 		public Database_nameContext database_name() {
 			return getRuleContext(Database_nameContext.class,0);
 		}
-		public TerminalNode K_TEMPORARY() { return getToken(SQLite2Parser.K_TEMPORARY, 0); }
+		public TerminalNode K_TEMPORARY() { return getToken(SQLRulesParser.K_TEMPORARY, 0); }
 		public Create_view_stmtContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_create_view_stmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterCreate_view_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterCreate_view_stmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitCreate_view_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitCreate_view_stmt(this);
 		}
 	}
 
@@ -1864,19 +1867,19 @@ public class SQLite2Parser extends Parser {
 		public Module_argumentContext module_argument(int i) {
 			return getRuleContext(Module_argumentContext.class,i);
 		}
-		public TerminalNode K_VIRTUAL() { return getToken(SQLite2Parser.K_VIRTUAL, 0); }
-		public TerminalNode K_CREATE() { return getToken(SQLite2Parser.K_CREATE, 0); }
-		public TerminalNode K_TABLE() { return getToken(SQLite2Parser.K_TABLE, 0); }
+		public TerminalNode K_VIRTUAL() { return getToken(SQLRulesParser.K_VIRTUAL, 0); }
+		public TerminalNode K_CREATE() { return getToken(SQLRulesParser.K_CREATE, 0); }
+		public TerminalNode K_TABLE() { return getToken(SQLRulesParser.K_TABLE, 0); }
 		public Table_nameContext table_name() {
 			return getRuleContext(Table_nameContext.class,0);
 		}
-		public TerminalNode K_IF() { return getToken(SQLite2Parser.K_IF, 0); }
-		public TerminalNode K_EXISTS() { return getToken(SQLite2Parser.K_EXISTS, 0); }
-		public TerminalNode K_USING() { return getToken(SQLite2Parser.K_USING, 0); }
+		public TerminalNode K_IF() { return getToken(SQLRulesParser.K_IF, 0); }
+		public TerminalNode K_EXISTS() { return getToken(SQLRulesParser.K_EXISTS, 0); }
+		public TerminalNode K_USING() { return getToken(SQLRulesParser.K_USING, 0); }
 		public List<Module_argumentContext> module_argument() {
 			return getRuleContexts(Module_argumentContext.class);
 		}
-		public TerminalNode K_NOT() { return getToken(SQLite2Parser.K_NOT, 0); }
+		public TerminalNode K_NOT() { return getToken(SQLRulesParser.K_NOT, 0); }
 		public Database_nameContext database_name() {
 			return getRuleContext(Database_nameContext.class,0);
 		}
@@ -1889,11 +1892,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_create_virtual_table_stmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterCreate_virtual_table_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterCreate_virtual_table_stmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitCreate_virtual_table_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitCreate_virtual_table_stmt(this);
 		}
 	}
 
@@ -1970,26 +1973,26 @@ public class SQLite2Parser extends Parser {
 		public ExprContext expr() {
 			return getRuleContext(ExprContext.class,0);
 		}
-		public TerminalNode K_WHERE() { return getToken(SQLite2Parser.K_WHERE, 0); }
+		public TerminalNode K_WHERE() { return getToken(SQLRulesParser.K_WHERE, 0); }
 		public With_clauseContext with_clause() {
 			return getRuleContext(With_clauseContext.class,0);
 		}
 		public Qualified_table_nameContext qualified_table_name() {
 			return getRuleContext(Qualified_table_nameContext.class,0);
 		}
-		public TerminalNode K_FROM() { return getToken(SQLite2Parser.K_FROM, 0); }
-		public TerminalNode K_DELETE() { return getToken(SQLite2Parser.K_DELETE, 0); }
+		public TerminalNode K_FROM() { return getToken(SQLRulesParser.K_FROM, 0); }
+		public TerminalNode K_DELETE() { return getToken(SQLRulesParser.K_DELETE, 0); }
 		public Delete_stmtContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_delete_stmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterDelete_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterDelete_stmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitDelete_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitDelete_stmt(this);
 		}
 	}
 
@@ -2037,39 +2040,39 @@ public class SQLite2Parser extends Parser {
 		public List<Ordering_termContext> ordering_term() {
 			return getRuleContexts(Ordering_termContext.class);
 		}
-		public TerminalNode K_WHERE() { return getToken(SQLite2Parser.K_WHERE, 0); }
+		public TerminalNode K_WHERE() { return getToken(SQLRulesParser.K_WHERE, 0); }
 		public ExprContext expr(int i) {
 			return getRuleContext(ExprContext.class,i);
 		}
-		public TerminalNode K_FROM() { return getToken(SQLite2Parser.K_FROM, 0); }
-		public TerminalNode K_LIMIT() { return getToken(SQLite2Parser.K_LIMIT, 0); }
-		public TerminalNode K_DELETE() { return getToken(SQLite2Parser.K_DELETE, 0); }
+		public TerminalNode K_FROM() { return getToken(SQLRulesParser.K_FROM, 0); }
+		public TerminalNode K_LIMIT() { return getToken(SQLRulesParser.K_LIMIT, 0); }
+		public TerminalNode K_DELETE() { return getToken(SQLRulesParser.K_DELETE, 0); }
 		public Ordering_termContext ordering_term(int i) {
 			return getRuleContext(Ordering_termContext.class,i);
 		}
 		public List<ExprContext> expr() {
 			return getRuleContexts(ExprContext.class);
 		}
-		public TerminalNode K_ORDER() { return getToken(SQLite2Parser.K_ORDER, 0); }
+		public TerminalNode K_ORDER() { return getToken(SQLRulesParser.K_ORDER, 0); }
 		public With_clauseContext with_clause() {
 			return getRuleContext(With_clauseContext.class,0);
 		}
 		public Qualified_table_nameContext qualified_table_name() {
 			return getRuleContext(Qualified_table_nameContext.class,0);
 		}
-		public TerminalNode K_BY() { return getToken(SQLite2Parser.K_BY, 0); }
-		public TerminalNode K_OFFSET() { return getToken(SQLite2Parser.K_OFFSET, 0); }
+		public TerminalNode K_BY() { return getToken(SQLRulesParser.K_BY, 0); }
+		public TerminalNode K_OFFSET() { return getToken(SQLRulesParser.K_OFFSET, 0); }
 		public Delete_stmt_limitedContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_delete_stmt_limited; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterDelete_stmt_limited(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterDelete_stmt_limited(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitDelete_stmt_limited(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitDelete_stmt_limited(this);
 		}
 	}
 
@@ -2161,8 +2164,8 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Detach_stmtContext extends ParserRuleContext {
-		public TerminalNode K_DATABASE() { return getToken(SQLite2Parser.K_DATABASE, 0); }
-		public TerminalNode K_DETACH() { return getToken(SQLite2Parser.K_DETACH, 0); }
+		public TerminalNode K_DATABASE() { return getToken(SQLRulesParser.K_DATABASE, 0); }
+		public TerminalNode K_DETACH() { return getToken(SQLRulesParser.K_DETACH, 0); }
 		public Database_nameContext database_name() {
 			return getRuleContext(Database_nameContext.class,0);
 		}
@@ -2172,11 +2175,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_detach_stmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterDetach_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterDetach_stmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitDetach_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitDetach_stmt(this);
 		}
 	}
 
@@ -2211,13 +2214,13 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Drop_index_stmtContext extends ParserRuleContext {
-		public TerminalNode K_INDEX() { return getToken(SQLite2Parser.K_INDEX, 0); }
-		public TerminalNode K_IF() { return getToken(SQLite2Parser.K_IF, 0); }
+		public TerminalNode K_INDEX() { return getToken(SQLRulesParser.K_INDEX, 0); }
+		public TerminalNode K_IF() { return getToken(SQLRulesParser.K_IF, 0); }
 		public Index_nameContext index_name() {
 			return getRuleContext(Index_nameContext.class,0);
 		}
-		public TerminalNode K_DROP() { return getToken(SQLite2Parser.K_DROP, 0); }
-		public TerminalNode K_EXISTS() { return getToken(SQLite2Parser.K_EXISTS, 0); }
+		public TerminalNode K_DROP() { return getToken(SQLRulesParser.K_DROP, 0); }
+		public TerminalNode K_EXISTS() { return getToken(SQLRulesParser.K_EXISTS, 0); }
 		public Database_nameContext database_name() {
 			return getRuleContext(Database_nameContext.class,0);
 		}
@@ -2227,11 +2230,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_drop_index_stmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterDrop_index_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterDrop_index_stmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitDrop_index_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitDrop_index_stmt(this);
 		}
 	}
 
@@ -2276,13 +2279,13 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Drop_table_stmtContext extends ParserRuleContext {
-		public TerminalNode K_TABLE() { return getToken(SQLite2Parser.K_TABLE, 0); }
+		public TerminalNode K_TABLE() { return getToken(SQLRulesParser.K_TABLE, 0); }
 		public Table_nameContext table_name() {
 			return getRuleContext(Table_nameContext.class,0);
 		}
-		public TerminalNode K_IF() { return getToken(SQLite2Parser.K_IF, 0); }
-		public TerminalNode K_DROP() { return getToken(SQLite2Parser.K_DROP, 0); }
-		public TerminalNode K_EXISTS() { return getToken(SQLite2Parser.K_EXISTS, 0); }
+		public TerminalNode K_IF() { return getToken(SQLRulesParser.K_IF, 0); }
+		public TerminalNode K_DROP() { return getToken(SQLRulesParser.K_DROP, 0); }
+		public TerminalNode K_EXISTS() { return getToken(SQLRulesParser.K_EXISTS, 0); }
 		public Database_nameContext database_name() {
 			return getRuleContext(Database_nameContext.class,0);
 		}
@@ -2292,11 +2295,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_drop_table_stmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterDrop_table_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterDrop_table_stmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitDrop_table_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitDrop_table_stmt(this);
 		}
 	}
 
@@ -2342,27 +2345,27 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Drop_trigger_stmtContext extends ParserRuleContext {
-		public TerminalNode K_IF() { return getToken(SQLite2Parser.K_IF, 0); }
+		public TerminalNode K_IF() { return getToken(SQLRulesParser.K_IF, 0); }
 		public Trigger_nameContext trigger_name() {
 			return getRuleContext(Trigger_nameContext.class,0);
 		}
-		public TerminalNode K_DROP() { return getToken(SQLite2Parser.K_DROP, 0); }
-		public TerminalNode K_EXISTS() { return getToken(SQLite2Parser.K_EXISTS, 0); }
+		public TerminalNode K_DROP() { return getToken(SQLRulesParser.K_DROP, 0); }
+		public TerminalNode K_EXISTS() { return getToken(SQLRulesParser.K_EXISTS, 0); }
 		public Database_nameContext database_name() {
 			return getRuleContext(Database_nameContext.class,0);
 		}
-		public TerminalNode K_TRIGGER() { return getToken(SQLite2Parser.K_TRIGGER, 0); }
+		public TerminalNode K_TRIGGER() { return getToken(SQLRulesParser.K_TRIGGER, 0); }
 		public Drop_trigger_stmtContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_drop_trigger_stmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterDrop_trigger_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterDrop_trigger_stmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitDrop_trigger_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitDrop_trigger_stmt(this);
 		}
 	}
 
@@ -2407,13 +2410,13 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Drop_view_stmtContext extends ParserRuleContext {
-		public TerminalNode K_IF() { return getToken(SQLite2Parser.K_IF, 0); }
+		public TerminalNode K_IF() { return getToken(SQLRulesParser.K_IF, 0); }
 		public View_nameContext view_name() {
 			return getRuleContext(View_nameContext.class,0);
 		}
-		public TerminalNode K_DROP() { return getToken(SQLite2Parser.K_DROP, 0); }
-		public TerminalNode K_VIEW() { return getToken(SQLite2Parser.K_VIEW, 0); }
-		public TerminalNode K_EXISTS() { return getToken(SQLite2Parser.K_EXISTS, 0); }
+		public TerminalNode K_DROP() { return getToken(SQLRulesParser.K_DROP, 0); }
+		public TerminalNode K_VIEW() { return getToken(SQLRulesParser.K_VIEW, 0); }
+		public TerminalNode K_EXISTS() { return getToken(SQLRulesParser.K_EXISTS, 0); }
 		public Database_nameContext database_name() {
 			return getRuleContext(Database_nameContext.class,0);
 		}
@@ -2423,11 +2426,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_drop_view_stmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterDrop_view_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterDrop_view_stmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitDrop_view_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitDrop_view_stmt(this);
 		}
 	}
 
@@ -2481,7 +2484,7 @@ public class SQLite2Parser extends Parser {
 		public ExprContext expr(int i) {
 			return getRuleContext(ExprContext.class,i);
 		}
-		public TerminalNode K_LIMIT() { return getToken(SQLite2Parser.K_LIMIT, 0); }
+		public TerminalNode K_LIMIT() { return getToken(SQLRulesParser.K_LIMIT, 0); }
 		public Compound_operatorContext compound_operator(int i) {
 			return getRuleContext(Compound_operatorContext.class,i);
 		}
@@ -2494,26 +2497,26 @@ public class SQLite2Parser extends Parser {
 		public List<ExprContext> expr() {
 			return getRuleContexts(ExprContext.class);
 		}
-		public TerminalNode K_ORDER() { return getToken(SQLite2Parser.K_ORDER, 0); }
+		public TerminalNode K_ORDER() { return getToken(SQLRulesParser.K_ORDER, 0); }
 		public With_clauseContext with_clause() {
 			return getRuleContext(With_clauseContext.class,0);
 		}
-		public TerminalNode K_BY() { return getToken(SQLite2Parser.K_BY, 0); }
+		public TerminalNode K_BY() { return getToken(SQLRulesParser.K_BY, 0); }
 		public List<Compound_operatorContext> compound_operator() {
 			return getRuleContexts(Compound_operatorContext.class);
 		}
-		public TerminalNode K_OFFSET() { return getToken(SQLite2Parser.K_OFFSET, 0); }
+		public TerminalNode K_OFFSET() { return getToken(SQLRulesParser.K_OFFSET, 0); }
 		public Factored_select_stmtContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_factored_select_stmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterFactored_select_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterFactored_select_stmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitFactored_select_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitFactored_select_stmt(this);
 		}
 	}
 
@@ -2608,14 +2611,14 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Insert_stmtContext extends ParserRuleContext {
-		public TerminalNode K_INTO() { return getToken(SQLite2Parser.K_INTO, 0); }
+		public TerminalNode K_INTO() { return getToken(SQLRulesParser.K_INTO, 0); }
 		public ExprContext expr(int i) {
 			return getRuleContext(ExprContext.class,i);
 		}
-		public TerminalNode K_INSERT() { return getToken(SQLite2Parser.K_INSERT, 0); }
-		public TerminalNode K_DEFAULT() { return getToken(SQLite2Parser.K_DEFAULT, 0); }
-		public TerminalNode K_ROLLBACK() { return getToken(SQLite2Parser.K_ROLLBACK, 0); }
-		public TerminalNode K_FAIL() { return getToken(SQLite2Parser.K_FAIL, 0); }
+		public TerminalNode K_INSERT() { return getToken(SQLRulesParser.K_INSERT, 0); }
+		public TerminalNode K_DEFAULT() { return getToken(SQLRulesParser.K_DEFAULT, 0); }
+		public TerminalNode K_ROLLBACK() { return getToken(SQLRulesParser.K_ROLLBACK, 0); }
+		public TerminalNode K_FAIL() { return getToken(SQLRulesParser.K_FAIL, 0); }
 		public Column_nameContext column_name(int i) {
 			return getRuleContext(Column_nameContext.class,i);
 		}
@@ -2625,34 +2628,34 @@ public class SQLite2Parser extends Parser {
 		public List<Column_nameContext> column_name() {
 			return getRuleContexts(Column_nameContext.class);
 		}
-		public TerminalNode K_IGNORE() { return getToken(SQLite2Parser.K_IGNORE, 0); }
+		public TerminalNode K_IGNORE() { return getToken(SQLRulesParser.K_IGNORE, 0); }
 		public Table_nameContext table_name() {
 			return getRuleContext(Table_nameContext.class,0);
 		}
-		public TerminalNode K_VALUES() { return getToken(SQLite2Parser.K_VALUES, 0); }
+		public TerminalNode K_VALUES() { return getToken(SQLRulesParser.K_VALUES, 0); }
 		public With_clauseContext with_clause() {
 			return getRuleContext(With_clauseContext.class,0);
 		}
-		public TerminalNode K_OR() { return getToken(SQLite2Parser.K_OR, 0); }
-		public TerminalNode K_ABORT() { return getToken(SQLite2Parser.K_ABORT, 0); }
+		public TerminalNode K_OR() { return getToken(SQLRulesParser.K_OR, 0); }
+		public TerminalNode K_ABORT() { return getToken(SQLRulesParser.K_ABORT, 0); }
 		public Select_stmtContext select_stmt() {
 			return getRuleContext(Select_stmtContext.class,0);
 		}
 		public Database_nameContext database_name() {
 			return getRuleContext(Database_nameContext.class,0);
 		}
-		public TerminalNode K_REPLACE() { return getToken(SQLite2Parser.K_REPLACE, 0); }
+		public TerminalNode K_REPLACE() { return getToken(SQLRulesParser.K_REPLACE, 0); }
 		public Insert_stmtContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_insert_stmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterInsert_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterInsert_stmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitInsert_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitInsert_stmt(this);
 		}
 	}
 
@@ -2851,18 +2854,18 @@ public class SQLite2Parser extends Parser {
 		public Database_nameContext database_name() {
 			return getRuleContext(Database_nameContext.class,0);
 		}
-		public TerminalNode K_PRAGMA() { return getToken(SQLite2Parser.K_PRAGMA, 0); }
+		public TerminalNode K_PRAGMA() { return getToken(SQLRulesParser.K_PRAGMA, 0); }
 		public Pragma_stmtContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_pragma_stmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterPragma_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterPragma_stmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitPragma_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitPragma_stmt(this);
 		}
 	}
 
@@ -2951,7 +2954,7 @@ public class SQLite2Parser extends Parser {
 		public Index_nameContext index_name() {
 			return getRuleContext(Index_nameContext.class,0);
 		}
-		public TerminalNode K_REINDEX() { return getToken(SQLite2Parser.K_REINDEX, 0); }
+		public TerminalNode K_REINDEX() { return getToken(SQLRulesParser.K_REINDEX, 0); }
 		public Database_nameContext database_name() {
 			return getRuleContext(Database_nameContext.class,0);
 		}
@@ -2961,11 +2964,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_reindex_stmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterReindex_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterReindex_stmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitReindex_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitReindex_stmt(this);
 		}
 	}
 
@@ -3026,8 +3029,8 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Release_stmtContext extends ParserRuleContext {
-		public TerminalNode K_SAVEPOINT() { return getToken(SQLite2Parser.K_SAVEPOINT, 0); }
-		public TerminalNode K_RELEASE() { return getToken(SQLite2Parser.K_RELEASE, 0); }
+		public TerminalNode K_SAVEPOINT() { return getToken(SQLRulesParser.K_SAVEPOINT, 0); }
+		public TerminalNode K_RELEASE() { return getToken(SQLRulesParser.K_RELEASE, 0); }
 		public Savepoint_nameContext savepoint_name() {
 			return getRuleContext(Savepoint_nameContext.class,0);
 		}
@@ -3037,11 +3040,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_release_stmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterRelease_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterRelease_stmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitRelease_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitRelease_stmt(this);
 		}
 	}
 
@@ -3075,27 +3078,27 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Rollback_stmtContext extends ParserRuleContext {
-		public TerminalNode K_SAVEPOINT() { return getToken(SQLite2Parser.K_SAVEPOINT, 0); }
+		public TerminalNode K_SAVEPOINT() { return getToken(SQLRulesParser.K_SAVEPOINT, 0); }
 		public Transaction_nameContext transaction_name() {
 			return getRuleContext(Transaction_nameContext.class,0);
 		}
 		public Savepoint_nameContext savepoint_name() {
 			return getRuleContext(Savepoint_nameContext.class,0);
 		}
-		public TerminalNode K_TO() { return getToken(SQLite2Parser.K_TO, 0); }
-		public TerminalNode K_TRANSACTION() { return getToken(SQLite2Parser.K_TRANSACTION, 0); }
-		public TerminalNode K_ROLLBACK() { return getToken(SQLite2Parser.K_ROLLBACK, 0); }
+		public TerminalNode K_TO() { return getToken(SQLRulesParser.K_TO, 0); }
+		public TerminalNode K_TRANSACTION() { return getToken(SQLRulesParser.K_TRANSACTION, 0); }
+		public TerminalNode K_ROLLBACK() { return getToken(SQLRulesParser.K_ROLLBACK, 0); }
 		public Rollback_stmtContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_rollback_stmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterRollback_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterRollback_stmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitRollback_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitRollback_stmt(this);
 		}
 	}
 
@@ -3154,7 +3157,7 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Savepoint_stmtContext extends ParserRuleContext {
-		public TerminalNode K_SAVEPOINT() { return getToken(SQLite2Parser.K_SAVEPOINT, 0); }
+		public TerminalNode K_SAVEPOINT() { return getToken(SQLRulesParser.K_SAVEPOINT, 0); }
 		public Savepoint_nameContext savepoint_name() {
 			return getRuleContext(Savepoint_nameContext.class,0);
 		}
@@ -3164,11 +3167,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_savepoint_stmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterSavepoint_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterSavepoint_stmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitSavepoint_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitSavepoint_stmt(this);
 		}
 	}
 
@@ -3206,27 +3209,27 @@ public class SQLite2Parser extends Parser {
 		public List<ExprContext> expr() {
 			return getRuleContexts(ExprContext.class);
 		}
-		public TerminalNode K_ORDER() { return getToken(SQLite2Parser.K_ORDER, 0); }
+		public TerminalNode K_ORDER() { return getToken(SQLRulesParser.K_ORDER, 0); }
 		public ExprContext expr(int i) {
 			return getRuleContext(ExprContext.class,i);
 		}
 		public With_clauseContext with_clause() {
 			return getRuleContext(With_clauseContext.class,0);
 		}
-		public TerminalNode K_LIMIT() { return getToken(SQLite2Parser.K_LIMIT, 0); }
-		public TerminalNode K_BY() { return getToken(SQLite2Parser.K_BY, 0); }
-		public TerminalNode K_OFFSET() { return getToken(SQLite2Parser.K_OFFSET, 0); }
+		public TerminalNode K_LIMIT() { return getToken(SQLRulesParser.K_LIMIT, 0); }
+		public TerminalNode K_BY() { return getToken(SQLRulesParser.K_BY, 0); }
+		public TerminalNode K_OFFSET() { return getToken(SQLRulesParser.K_OFFSET, 0); }
 		public Simple_select_stmtContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_simple_select_stmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterSimple_select_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterSimple_select_stmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitSimple_select_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitSimple_select_stmt(this);
 		}
 	}
 
@@ -3316,7 +3319,7 @@ public class SQLite2Parser extends Parser {
 		public ExprContext expr(int i) {
 			return getRuleContext(ExprContext.class,i);
 		}
-		public TerminalNode K_LIMIT() { return getToken(SQLite2Parser.K_LIMIT, 0); }
+		public TerminalNode K_LIMIT() { return getToken(SQLRulesParser.K_LIMIT, 0); }
 		public Compound_operatorContext compound_operator(int i) {
 			return getRuleContext(Compound_operatorContext.class,i);
 		}
@@ -3326,29 +3329,29 @@ public class SQLite2Parser extends Parser {
 		public List<ExprContext> expr() {
 			return getRuleContexts(ExprContext.class);
 		}
-		public TerminalNode K_ORDER() { return getToken(SQLite2Parser.K_ORDER, 0); }
+		public TerminalNode K_ORDER() { return getToken(SQLRulesParser.K_ORDER, 0); }
 		public With_clauseContext with_clause() {
 			return getRuleContext(With_clauseContext.class,0);
 		}
 		public List<Select_or_valuesContext> select_or_values() {
 			return getRuleContexts(Select_or_valuesContext.class);
 		}
-		public TerminalNode K_BY() { return getToken(SQLite2Parser.K_BY, 0); }
+		public TerminalNode K_BY() { return getToken(SQLRulesParser.K_BY, 0); }
 		public List<Compound_operatorContext> compound_operator() {
 			return getRuleContexts(Compound_operatorContext.class);
 		}
-		public TerminalNode K_OFFSET() { return getToken(SQLite2Parser.K_OFFSET, 0); }
+		public TerminalNode K_OFFSET() { return getToken(SQLRulesParser.K_OFFSET, 0); }
 		public Select_stmtContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_select_stmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterSelect_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterSelect_stmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitSelect_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitSelect_stmt(this);
 		}
 	}
 
@@ -3443,7 +3446,7 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Select_or_valuesContext extends ParserRuleContext {
-		public TerminalNode K_WHERE() { return getToken(SQLite2Parser.K_WHERE, 0); }
+		public TerminalNode K_WHERE() { return getToken(SQLRulesParser.K_WHERE, 0); }
 		public ExprContext expr(int i) {
 			return getRuleContext(ExprContext.class,i);
 		}
@@ -3453,23 +3456,23 @@ public class SQLite2Parser extends Parser {
 		public Result_columnContext result_column(int i) {
 			return getRuleContext(Result_columnContext.class,i);
 		}
-		public TerminalNode K_FROM() { return getToken(SQLite2Parser.K_FROM, 0); }
+		public TerminalNode K_FROM() { return getToken(SQLRulesParser.K_FROM, 0); }
 		public Join_clauseContext join_clause() {
 			return getRuleContext(Join_clauseContext.class,0);
 		}
-		public TerminalNode K_ALL() { return getToken(SQLite2Parser.K_ALL, 0); }
+		public TerminalNode K_ALL() { return getToken(SQLRulesParser.K_ALL, 0); }
 		public List<ExprContext> expr() {
 			return getRuleContexts(ExprContext.class);
 		}
-		public TerminalNode K_GROUP() { return getToken(SQLite2Parser.K_GROUP, 0); }
-		public TerminalNode K_DISTINCT() { return getToken(SQLite2Parser.K_DISTINCT, 0); }
-		public TerminalNode K_HAVING() { return getToken(SQLite2Parser.K_HAVING, 0); }
-		public TerminalNode K_VALUES() { return getToken(SQLite2Parser.K_VALUES, 0); }
+		public TerminalNode K_GROUP() { return getToken(SQLRulesParser.K_GROUP, 0); }
+		public TerminalNode K_DISTINCT() { return getToken(SQLRulesParser.K_DISTINCT, 0); }
+		public TerminalNode K_HAVING() { return getToken(SQLRulesParser.K_HAVING, 0); }
+		public TerminalNode K_VALUES() { return getToken(SQLRulesParser.K_VALUES, 0); }
 		public List<Table_or_subqueryContext> table_or_subquery() {
 			return getRuleContexts(Table_or_subqueryContext.class);
 		}
-		public TerminalNode K_SELECT() { return getToken(SQLite2Parser.K_SELECT, 0); }
-		public TerminalNode K_BY() { return getToken(SQLite2Parser.K_BY, 0); }
+		public TerminalNode K_SELECT() { return getToken(SQLRulesParser.K_SELECT, 0); }
+		public TerminalNode K_BY() { return getToken(SQLRulesParser.K_BY, 0); }
 		public Table_or_subqueryContext table_or_subquery(int i) {
 			return getRuleContext(Table_or_subqueryContext.class,i);
 		}
@@ -3479,11 +3482,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_select_or_values; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterSelect_or_values(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterSelect_or_values(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitSelect_or_values(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitSelect_or_values(this);
 		}
 	}
 
@@ -3678,9 +3681,9 @@ public class SQLite2Parser extends Parser {
 		public ExprContext expr(int i) {
 			return getRuleContext(ExprContext.class,i);
 		}
-		public TerminalNode K_WHERE() { return getToken(SQLite2Parser.K_WHERE, 0); }
-		public TerminalNode K_ROLLBACK() { return getToken(SQLite2Parser.K_ROLLBACK, 0); }
-		public TerminalNode K_FAIL() { return getToken(SQLite2Parser.K_FAIL, 0); }
+		public TerminalNode K_WHERE() { return getToken(SQLRulesParser.K_WHERE, 0); }
+		public TerminalNode K_ROLLBACK() { return getToken(SQLRulesParser.K_ROLLBACK, 0); }
+		public TerminalNode K_FAIL() { return getToken(SQLRulesParser.K_FAIL, 0); }
 		public Column_nameContext column_name(int i) {
 			return getRuleContext(Column_nameContext.class,i);
 		}
@@ -3690,29 +3693,29 @@ public class SQLite2Parser extends Parser {
 		public List<ExprContext> expr() {
 			return getRuleContexts(ExprContext.class);
 		}
-		public TerminalNode K_IGNORE() { return getToken(SQLite2Parser.K_IGNORE, 0); }
+		public TerminalNode K_IGNORE() { return getToken(SQLRulesParser.K_IGNORE, 0); }
 		public With_clauseContext with_clause() {
 			return getRuleContext(With_clauseContext.class,0);
 		}
-		public TerminalNode K_UPDATE() { return getToken(SQLite2Parser.K_UPDATE, 0); }
+		public TerminalNode K_UPDATE() { return getToken(SQLRulesParser.K_UPDATE, 0); }
 		public Qualified_table_nameContext qualified_table_name() {
 			return getRuleContext(Qualified_table_nameContext.class,0);
 		}
-		public TerminalNode K_SET() { return getToken(SQLite2Parser.K_SET, 0); }
-		public TerminalNode K_OR() { return getToken(SQLite2Parser.K_OR, 0); }
-		public TerminalNode K_ABORT() { return getToken(SQLite2Parser.K_ABORT, 0); }
-		public TerminalNode K_REPLACE() { return getToken(SQLite2Parser.K_REPLACE, 0); }
+		public TerminalNode K_SET() { return getToken(SQLRulesParser.K_SET, 0); }
+		public TerminalNode K_OR() { return getToken(SQLRulesParser.K_OR, 0); }
+		public TerminalNode K_ABORT() { return getToken(SQLRulesParser.K_ABORT, 0); }
+		public TerminalNode K_REPLACE() { return getToken(SQLRulesParser.K_REPLACE, 0); }
 		public Update_stmtContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_update_stmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterUpdate_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterUpdate_stmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitUpdate_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitUpdate_stmt(this);
 		}
 	}
 
@@ -3819,10 +3822,10 @@ public class SQLite2Parser extends Parser {
 		public ExprContext expr(int i) {
 			return getRuleContext(ExprContext.class,i);
 		}
-		public TerminalNode K_WHERE() { return getToken(SQLite2Parser.K_WHERE, 0); }
-		public TerminalNode K_LIMIT() { return getToken(SQLite2Parser.K_LIMIT, 0); }
-		public TerminalNode K_ROLLBACK() { return getToken(SQLite2Parser.K_ROLLBACK, 0); }
-		public TerminalNode K_FAIL() { return getToken(SQLite2Parser.K_FAIL, 0); }
+		public TerminalNode K_WHERE() { return getToken(SQLRulesParser.K_WHERE, 0); }
+		public TerminalNode K_LIMIT() { return getToken(SQLRulesParser.K_LIMIT, 0); }
+		public TerminalNode K_ROLLBACK() { return getToken(SQLRulesParser.K_ROLLBACK, 0); }
+		public TerminalNode K_FAIL() { return getToken(SQLRulesParser.K_FAIL, 0); }
 		public Column_nameContext column_name(int i) {
 			return getRuleContext(Column_nameContext.class,i);
 		}
@@ -3835,32 +3838,32 @@ public class SQLite2Parser extends Parser {
 		public List<ExprContext> expr() {
 			return getRuleContexts(ExprContext.class);
 		}
-		public TerminalNode K_IGNORE() { return getToken(SQLite2Parser.K_IGNORE, 0); }
-		public TerminalNode K_ORDER() { return getToken(SQLite2Parser.K_ORDER, 0); }
+		public TerminalNode K_IGNORE() { return getToken(SQLRulesParser.K_IGNORE, 0); }
+		public TerminalNode K_ORDER() { return getToken(SQLRulesParser.K_ORDER, 0); }
 		public With_clauseContext with_clause() {
 			return getRuleContext(With_clauseContext.class,0);
 		}
-		public TerminalNode K_UPDATE() { return getToken(SQLite2Parser.K_UPDATE, 0); }
+		public TerminalNode K_UPDATE() { return getToken(SQLRulesParser.K_UPDATE, 0); }
 		public Qualified_table_nameContext qualified_table_name() {
 			return getRuleContext(Qualified_table_nameContext.class,0);
 		}
-		public TerminalNode K_SET() { return getToken(SQLite2Parser.K_SET, 0); }
-		public TerminalNode K_BY() { return getToken(SQLite2Parser.K_BY, 0); }
-		public TerminalNode K_OR() { return getToken(SQLite2Parser.K_OR, 0); }
-		public TerminalNode K_ABORT() { return getToken(SQLite2Parser.K_ABORT, 0); }
-		public TerminalNode K_REPLACE() { return getToken(SQLite2Parser.K_REPLACE, 0); }
-		public TerminalNode K_OFFSET() { return getToken(SQLite2Parser.K_OFFSET, 0); }
+		public TerminalNode K_SET() { return getToken(SQLRulesParser.K_SET, 0); }
+		public TerminalNode K_BY() { return getToken(SQLRulesParser.K_BY, 0); }
+		public TerminalNode K_OR() { return getToken(SQLRulesParser.K_OR, 0); }
+		public TerminalNode K_ABORT() { return getToken(SQLRulesParser.K_ABORT, 0); }
+		public TerminalNode K_REPLACE() { return getToken(SQLRulesParser.K_REPLACE, 0); }
+		public TerminalNode K_OFFSET() { return getToken(SQLRulesParser.K_OFFSET, 0); }
 		public Update_stmt_limitedContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_update_stmt_limited; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterUpdate_stmt_limited(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterUpdate_stmt_limited(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitUpdate_stmt_limited(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitUpdate_stmt_limited(this);
 		}
 	}
 
@@ -4008,18 +4011,18 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Vacuum_stmtContext extends ParserRuleContext {
-		public TerminalNode K_VACUUM() { return getToken(SQLite2Parser.K_VACUUM, 0); }
+		public TerminalNode K_VACUUM() { return getToken(SQLRulesParser.K_VACUUM, 0); }
 		public Vacuum_stmtContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_vacuum_stmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterVacuum_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterVacuum_stmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitVacuum_stmt(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitVacuum_stmt(this);
 		}
 	}
 
@@ -4062,11 +4065,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_column_def; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterColumn_def(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterColumn_def(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitColumn_def(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitColumn_def(this);
 		}
 	}
 
@@ -4131,11 +4134,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_type_name; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterType_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterType_name(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitType_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitType_name(this);
 		}
 	}
 
@@ -4199,11 +4202,11 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Column_constraintContext extends ParserRuleContext {
-		public TerminalNode K_COLLATE() { return getToken(SQLite2Parser.K_COLLATE, 0); }
-		public TerminalNode K_DEFAULT() { return getToken(SQLite2Parser.K_DEFAULT, 0); }
-		public TerminalNode K_AUTOINCREMENT() { return getToken(SQLite2Parser.K_AUTOINCREMENT, 0); }
-		public TerminalNode K_DESC() { return getToken(SQLite2Parser.K_DESC, 0); }
-		public TerminalNode K_PRIMARY() { return getToken(SQLite2Parser.K_PRIMARY, 0); }
+		public TerminalNode K_COLLATE() { return getToken(SQLRulesParser.K_COLLATE, 0); }
+		public TerminalNode K_DEFAULT() { return getToken(SQLRulesParser.K_DEFAULT, 0); }
+		public TerminalNode K_AUTOINCREMENT() { return getToken(SQLRulesParser.K_AUTOINCREMENT, 0); }
+		public TerminalNode K_DESC() { return getToken(SQLRulesParser.K_DESC, 0); }
+		public TerminalNode K_PRIMARY() { return getToken(SQLRulesParser.K_PRIMARY, 0); }
 		public ExprContext expr() {
 			return getRuleContext(ExprContext.class,0);
 		}
@@ -4213,22 +4216,22 @@ public class SQLite2Parser extends Parser {
 		public Collation_nameContext collation_name() {
 			return getRuleContext(Collation_nameContext.class,0);
 		}
-		public TerminalNode K_CHECK() { return getToken(SQLite2Parser.K_CHECK, 0); }
-		public TerminalNode K_NULL() { return getToken(SQLite2Parser.K_NULL, 0); }
+		public TerminalNode K_CHECK() { return getToken(SQLRulesParser.K_CHECK, 0); }
+		public TerminalNode K_NULL() { return getToken(SQLRulesParser.K_NULL, 0); }
 		public Signed_numberContext signed_number() {
 			return getRuleContext(Signed_numberContext.class,0);
 		}
-		public TerminalNode K_UNIQUE() { return getToken(SQLite2Parser.K_UNIQUE, 0); }
-		public TerminalNode K_KEY() { return getToken(SQLite2Parser.K_KEY, 0); }
-		public TerminalNode K_CONSTRAINT() { return getToken(SQLite2Parser.K_CONSTRAINT, 0); }
+		public TerminalNode K_UNIQUE() { return getToken(SQLRulesParser.K_UNIQUE, 0); }
+		public TerminalNode K_KEY() { return getToken(SQLRulesParser.K_KEY, 0); }
+		public TerminalNode K_CONSTRAINT() { return getToken(SQLRulesParser.K_CONSTRAINT, 0); }
 		public NameContext name() {
 			return getRuleContext(NameContext.class,0);
 		}
 		public Conflict_clauseContext conflict_clause() {
 			return getRuleContext(Conflict_clauseContext.class,0);
 		}
-		public TerminalNode K_NOT() { return getToken(SQLite2Parser.K_NOT, 0); }
-		public TerminalNode K_ASC() { return getToken(SQLite2Parser.K_ASC, 0); }
+		public TerminalNode K_NOT() { return getToken(SQLRulesParser.K_NOT, 0); }
+		public TerminalNode K_ASC() { return getToken(SQLRulesParser.K_ASC, 0); }
 		public Foreign_key_clauseContext foreign_key_clause() {
 			return getRuleContext(Foreign_key_clauseContext.class,0);
 		}
@@ -4238,11 +4241,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_column_constraint; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterColumn_constraint(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterColumn_constraint(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitColumn_constraint(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitColumn_constraint(this);
 		}
 	}
 
@@ -4376,24 +4379,24 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Conflict_clauseContext extends ParserRuleContext {
-		public TerminalNode K_ON() { return getToken(SQLite2Parser.K_ON, 0); }
-		public TerminalNode K_IGNORE() { return getToken(SQLite2Parser.K_IGNORE, 0); }
-		public TerminalNode K_CONFLICT() { return getToken(SQLite2Parser.K_CONFLICT, 0); }
-		public TerminalNode K_ABORT() { return getToken(SQLite2Parser.K_ABORT, 0); }
-		public TerminalNode K_ROLLBACK() { return getToken(SQLite2Parser.K_ROLLBACK, 0); }
-		public TerminalNode K_FAIL() { return getToken(SQLite2Parser.K_FAIL, 0); }
-		public TerminalNode K_REPLACE() { return getToken(SQLite2Parser.K_REPLACE, 0); }
+		public TerminalNode K_ON() { return getToken(SQLRulesParser.K_ON, 0); }
+		public TerminalNode K_IGNORE() { return getToken(SQLRulesParser.K_IGNORE, 0); }
+		public TerminalNode K_CONFLICT() { return getToken(SQLRulesParser.K_CONFLICT, 0); }
+		public TerminalNode K_ABORT() { return getToken(SQLRulesParser.K_ABORT, 0); }
+		public TerminalNode K_ROLLBACK() { return getToken(SQLRulesParser.K_ROLLBACK, 0); }
+		public TerminalNode K_FAIL() { return getToken(SQLRulesParser.K_FAIL, 0); }
+		public TerminalNode K_REPLACE() { return getToken(SQLRulesParser.K_REPLACE, 0); }
 		public Conflict_clauseContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_conflict_clause; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterConflict_clause(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterConflict_clause(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitConflict_clause(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitConflict_clause(this);
 		}
 	}
 
@@ -4436,85 +4439,85 @@ public class SQLite2Parser extends Parser {
 		public ExprContext expr(int i) {
 			return getRuleContext(ExprContext.class,i);
 		}
-		public TerminalNode BIND_PARAMETER() { return getToken(SQLite2Parser.BIND_PARAMETER, 0); }
+		public TerminalNode BIND_PARAMETER() { return getToken(SQLRulesParser.BIND_PARAMETER, 0); }
 		public Target_nameContext target_name() {
 			return getRuleContext(Target_nameContext.class,0);
 		}
 		public Type_nameContext type_name() {
 			return getRuleContext(Type_nameContext.class,0);
 		}
-		public TerminalNode K_COLLATE() { return getToken(SQLite2Parser.K_COLLATE, 0); }
-		public TerminalNode K_EXISTS() { return getToken(SQLite2Parser.K_EXISTS, 0); }
-		public TerminalNode K_CASE() { return getToken(SQLite2Parser.K_CASE, 0); }
-		public TerminalNode K_MATCH() { return getToken(SQLite2Parser.K_MATCH, 0); }
+		public TerminalNode K_COLLATE() { return getToken(SQLRulesParser.K_COLLATE, 0); }
+		public TerminalNode K_EXISTS() { return getToken(SQLRulesParser.K_EXISTS, 0); }
+		public TerminalNode K_CASE() { return getToken(SQLRulesParser.K_CASE, 0); }
+		public TerminalNode K_MATCH() { return getToken(SQLRulesParser.K_MATCH, 0); }
 		public Function_nameContext function_name() {
 			return getRuleContext(Function_nameContext.class,0);
 		}
-		public TerminalNode K_IS() { return getToken(SQLite2Parser.K_IS, 0); }
-		public TerminalNode K_ISNULL() { return getToken(SQLite2Parser.K_ISNULL, 0); }
+		public TerminalNode K_IS() { return getToken(SQLRulesParser.K_IS, 0); }
+		public TerminalNode K_ISNULL() { return getToken(SQLRulesParser.K_ISNULL, 0); }
 		public Table_nameContext table_name() {
 			return getRuleContext(Table_nameContext.class,0);
 		}
-		public TerminalNode K_NULL() { return getToken(SQLite2Parser.K_NULL, 0); }
-		public TerminalNode K_OR() { return getToken(SQLite2Parser.K_OR, 0); }
-		public List<TerminalNode> K_WHEN() { return getTokens(SQLite2Parser.K_WHEN); }
-		public TerminalNode K_BETWEEN() { return getToken(SQLite2Parser.K_BETWEEN, 0); }
+		public TerminalNode K_NULL() { return getToken(SQLRulesParser.K_NULL, 0); }
+		public TerminalNode K_OR() { return getToken(SQLRulesParser.K_OR, 0); }
+		public List<TerminalNode> K_WHEN() { return getTokens(SQLRulesParser.K_WHEN); }
+		public TerminalNode K_BETWEEN() { return getToken(SQLRulesParser.K_BETWEEN, 0); }
 		public TerminalNode K_THEN(int i) {
-			return getToken(SQLite2Parser.K_THEN, i);
+			return getToken(SQLRulesParser.K_THEN, i);
 		}
-		public TerminalNode STRING_VALUE() { return getToken(SQLite2Parser.STRING_VALUE, 0); }
-		public TerminalNode K_CAST() { return getToken(SQLite2Parser.K_CAST, 0); }
-		public TerminalNode K_REGEXP() { return getToken(SQLite2Parser.K_REGEXP, 0); }
+		public TerminalNode STRING_VALUE() { return getToken(SQLRulesParser.STRING_VALUE, 0); }
+		public TerminalNode K_CAST() { return getToken(SQLRulesParser.K_CAST, 0); }
+		public TerminalNode K_REGEXP() { return getToken(SQLRulesParser.K_REGEXP, 0); }
 		public Unary_operatorContext unary_operator() {
 			return getRuleContext(Unary_operatorContext.class,0);
 		}
 		public TerminalNode K_WHEN(int i) {
-			return getToken(SQLite2Parser.K_WHEN, i);
+			return getToken(SQLRulesParser.K_WHEN, i);
 		}
-		public TerminalNode K_LIKE() { return getToken(SQLite2Parser.K_LIKE, 0); }
+		public TerminalNode K_LIKE() { return getToken(SQLRulesParser.K_LIKE, 0); }
 		public Comparing_operatorsContext comparing_operators() {
 			return getRuleContext(Comparing_operatorsContext.class,0);
 		}
-		public TerminalNode K_GLOB() { return getToken(SQLite2Parser.K_GLOB, 0); }
+		public TerminalNode K_GLOB() { return getToken(SQLRulesParser.K_GLOB, 0); }
 		public Raise_functionContext raise_function() {
 			return getRuleContext(Raise_functionContext.class,0);
 		}
-		public TerminalNode K_AS() { return getToken(SQLite2Parser.K_AS, 0); }
-		public TerminalNode K_ELSE() { return getToken(SQLite2Parser.K_ELSE, 0); }
+		public TerminalNode K_AS() { return getToken(SQLRulesParser.K_AS, 0); }
+		public TerminalNode K_ELSE() { return getToken(SQLRulesParser.K_ELSE, 0); }
 		public List<ExprContext> expr() {
 			return getRuleContexts(ExprContext.class);
 		}
 		public Literal_valueContext literal_value() {
 			return getRuleContext(Literal_valueContext.class,0);
 		}
-		public TerminalNode K_DISTINCT() { return getToken(SQLite2Parser.K_DISTINCT, 0); }
+		public TerminalNode K_DISTINCT() { return getToken(SQLRulesParser.K_DISTINCT, 0); }
 		public Collation_nameContext collation_name() {
 			return getRuleContext(Collation_nameContext.class,0);
 		}
-		public TerminalNode K_IN() { return getToken(SQLite2Parser.K_IN, 0); }
-		public TerminalNode K_AND() { return getToken(SQLite2Parser.K_AND, 0); }
-		public TerminalNode K_NOT() { return getToken(SQLite2Parser.K_NOT, 0); }
-		public TerminalNode K_ESCAPE() { return getToken(SQLite2Parser.K_ESCAPE, 0); }
+		public TerminalNode K_IN() { return getToken(SQLRulesParser.K_IN, 0); }
+		public TerminalNode K_AND() { return getToken(SQLRulesParser.K_AND, 0); }
+		public TerminalNode K_NOT() { return getToken(SQLRulesParser.K_NOT, 0); }
+		public TerminalNode K_ESCAPE() { return getToken(SQLRulesParser.K_ESCAPE, 0); }
 		public Select_stmtContext select_stmt() {
 			return getRuleContext(Select_stmtContext.class,0);
 		}
-		public TerminalNode K_END() { return getToken(SQLite2Parser.K_END, 0); }
+		public TerminalNode K_END() { return getToken(SQLRulesParser.K_END, 0); }
 		public Database_nameContext database_name() {
 			return getRuleContext(Database_nameContext.class,0);
 		}
-		public TerminalNode K_NOTNULL() { return getToken(SQLite2Parser.K_NOTNULL, 0); }
-		public List<TerminalNode> K_THEN() { return getTokens(SQLite2Parser.K_THEN); }
+		public TerminalNode K_NOTNULL() { return getToken(SQLRulesParser.K_NOTNULL, 0); }
+		public List<TerminalNode> K_THEN() { return getTokens(SQLRulesParser.K_THEN); }
 		public ExprContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_expr; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterExpr(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterExpr(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitExpr(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitExpr(this);
 		}
 	}
 
@@ -4705,7 +4708,6 @@ public class SQLite2Parser extends Parser {
 				case STRING_VALUE:
 				case NUMERIC_LITERAL:
 				case BIND_PARAMETER:
-				case STRING_LITERAL:
 				case BLOB_LITERAL:
 					{
 					setState(1086);
@@ -5161,11 +5163,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_target_name; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterTarget_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterTarget_name(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitTarget_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitTarget_name(this);
 		}
 	}
 
@@ -5211,79 +5213,79 @@ public class SQLite2Parser extends Parser {
 		public NameContext name(int i) {
 			return getRuleContext(NameContext.class,i);
 		}
-		public List<TerminalNode> K_RESTRICT() { return getTokens(SQLite2Parser.K_RESTRICT); }
+		public List<TerminalNode> K_RESTRICT() { return getTokens(SQLRulesParser.K_RESTRICT); }
 		public TerminalNode K_NO(int i) {
-			return getToken(SQLite2Parser.K_NO, i);
+			return getToken(SQLRulesParser.K_NO, i);
 		}
-		public List<TerminalNode> K_CASCADE() { return getTokens(SQLite2Parser.K_CASCADE); }
-		public List<TerminalNode> K_DEFAULT() { return getTokens(SQLite2Parser.K_DEFAULT); }
+		public List<TerminalNode> K_CASCADE() { return getTokens(SQLRulesParser.K_CASCADE); }
+		public List<TerminalNode> K_DEFAULT() { return getTokens(SQLRulesParser.K_DEFAULT); }
 		public TerminalNode K_RESTRICT(int i) {
-			return getToken(SQLite2Parser.K_RESTRICT, i);
+			return getToken(SQLRulesParser.K_RESTRICT, i);
 		}
 		public TerminalNode K_ACTION(int i) {
-			return getToken(SQLite2Parser.K_ACTION, i);
+			return getToken(SQLRulesParser.K_ACTION, i);
 		}
-		public List<TerminalNode> K_DELETE() { return getTokens(SQLite2Parser.K_DELETE); }
+		public List<TerminalNode> K_DELETE() { return getTokens(SQLRulesParser.K_DELETE); }
 		public TerminalNode K_DEFAULT(int i) {
-			return getToken(SQLite2Parser.K_DEFAULT, i);
+			return getToken(SQLRulesParser.K_DEFAULT, i);
 		}
 		public TerminalNode K_SET(int i) {
-			return getToken(SQLite2Parser.K_SET, i);
+			return getToken(SQLRulesParser.K_SET, i);
 		}
 		public TerminalNode K_ON(int i) {
-			return getToken(SQLite2Parser.K_ON, i);
+			return getToken(SQLRulesParser.K_ON, i);
 		}
-		public List<TerminalNode> K_MATCH() { return getTokens(SQLite2Parser.K_MATCH); }
-		public TerminalNode K_INITIALLY() { return getToken(SQLite2Parser.K_INITIALLY, 0); }
-		public TerminalNode K_DEFERRABLE() { return getToken(SQLite2Parser.K_DEFERRABLE, 0); }
-		public List<TerminalNode> K_SET() { return getTokens(SQLite2Parser.K_SET); }
-		public List<TerminalNode> K_NULL() { return getTokens(SQLite2Parser.K_NULL); }
+		public List<TerminalNode> K_MATCH() { return getTokens(SQLRulesParser.K_MATCH); }
+		public TerminalNode K_INITIALLY() { return getToken(SQLRulesParser.K_INITIALLY, 0); }
+		public TerminalNode K_DEFERRABLE() { return getToken(SQLRulesParser.K_DEFERRABLE, 0); }
+		public List<TerminalNode> K_SET() { return getTokens(SQLRulesParser.K_SET); }
+		public List<TerminalNode> K_NULL() { return getTokens(SQLRulesParser.K_NULL); }
 		public List<NameContext> name() {
 			return getRuleContexts(NameContext.class);
 		}
 		public TerminalNode K_NULL(int i) {
-			return getToken(SQLite2Parser.K_NULL, i);
+			return getToken(SQLRulesParser.K_NULL, i);
 		}
 		public Foreign_tableContext foreign_table() {
 			return getRuleContext(Foreign_tableContext.class,0);
 		}
 		public TerminalNode K_DELETE(int i) {
-			return getToken(SQLite2Parser.K_DELETE, i);
+			return getToken(SQLRulesParser.K_DELETE, i);
 		}
-		public List<TerminalNode> K_NO() { return getTokens(SQLite2Parser.K_NO); }
+		public List<TerminalNode> K_NO() { return getTokens(SQLRulesParser.K_NO); }
 		public TerminalNode K_UPDATE(int i) {
-			return getToken(SQLite2Parser.K_UPDATE, i);
+			return getToken(SQLRulesParser.K_UPDATE, i);
 		}
-		public TerminalNode K_DEFERRED() { return getToken(SQLite2Parser.K_DEFERRED, 0); }
-		public TerminalNode K_IMMEDIATE() { return getToken(SQLite2Parser.K_IMMEDIATE, 0); }
+		public TerminalNode K_DEFERRED() { return getToken(SQLRulesParser.K_DEFERRED, 0); }
+		public TerminalNode K_IMMEDIATE() { return getToken(SQLRulesParser.K_IMMEDIATE, 0); }
 		public Column_nameContext column_name(int i) {
 			return getRuleContext(Column_nameContext.class,i);
 		}
-		public List<TerminalNode> K_ON() { return getTokens(SQLite2Parser.K_ON); }
+		public List<TerminalNode> K_ON() { return getTokens(SQLRulesParser.K_ON); }
 		public List<Column_nameContext> column_name() {
 			return getRuleContexts(Column_nameContext.class);
 		}
-		public TerminalNode K_REFERENCES() { return getToken(SQLite2Parser.K_REFERENCES, 0); }
+		public TerminalNode K_REFERENCES() { return getToken(SQLRulesParser.K_REFERENCES, 0); }
 		public TerminalNode K_CASCADE(int i) {
-			return getToken(SQLite2Parser.K_CASCADE, i);
+			return getToken(SQLRulesParser.K_CASCADE, i);
 		}
-		public List<TerminalNode> K_UPDATE() { return getTokens(SQLite2Parser.K_UPDATE); }
+		public List<TerminalNode> K_UPDATE() { return getTokens(SQLRulesParser.K_UPDATE); }
 		public TerminalNode K_MATCH(int i) {
-			return getToken(SQLite2Parser.K_MATCH, i);
+			return getToken(SQLRulesParser.K_MATCH, i);
 		}
-		public List<TerminalNode> K_ACTION() { return getTokens(SQLite2Parser.K_ACTION); }
-		public TerminalNode K_NOT() { return getToken(SQLite2Parser.K_NOT, 0); }
+		public List<TerminalNode> K_ACTION() { return getTokens(SQLRulesParser.K_ACTION); }
+		public TerminalNode K_NOT() { return getToken(SQLRulesParser.K_NOT, 0); }
 		public Foreign_key_clauseContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_foreign_key_clause; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterForeign_key_clause(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterForeign_key_clause(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitForeign_key_clause(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitForeign_key_clause(this);
 		}
 	}
 
@@ -5438,22 +5440,22 @@ public class SQLite2Parser extends Parser {
 		public Error_messageContext error_message() {
 			return getRuleContext(Error_messageContext.class,0);
 		}
-		public TerminalNode K_IGNORE() { return getToken(SQLite2Parser.K_IGNORE, 0); }
-		public TerminalNode K_ABORT() { return getToken(SQLite2Parser.K_ABORT, 0); }
-		public TerminalNode K_RAISE() { return getToken(SQLite2Parser.K_RAISE, 0); }
-		public TerminalNode K_ROLLBACK() { return getToken(SQLite2Parser.K_ROLLBACK, 0); }
-		public TerminalNode K_FAIL() { return getToken(SQLite2Parser.K_FAIL, 0); }
+		public TerminalNode K_IGNORE() { return getToken(SQLRulesParser.K_IGNORE, 0); }
+		public TerminalNode K_ABORT() { return getToken(SQLRulesParser.K_ABORT, 0); }
+		public TerminalNode K_RAISE() { return getToken(SQLRulesParser.K_RAISE, 0); }
+		public TerminalNode K_ROLLBACK() { return getToken(SQLRulesParser.K_ROLLBACK, 0); }
+		public TerminalNode K_FAIL() { return getToken(SQLRulesParser.K_FAIL, 0); }
 		public Raise_functionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_raise_function; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterRaise_function(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterRaise_function(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitRaise_function(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitRaise_function(this);
 		}
 	}
 
@@ -5511,20 +5513,20 @@ public class SQLite2Parser extends Parser {
 		public Collation_nameContext collation_name() {
 			return getRuleContext(Collation_nameContext.class,0);
 		}
-		public TerminalNode K_COLLATE() { return getToken(SQLite2Parser.K_COLLATE, 0); }
-		public TerminalNode K_DESC() { return getToken(SQLite2Parser.K_DESC, 0); }
-		public TerminalNode K_ASC() { return getToken(SQLite2Parser.K_ASC, 0); }
+		public TerminalNode K_COLLATE() { return getToken(SQLRulesParser.K_COLLATE, 0); }
+		public TerminalNode K_DESC() { return getToken(SQLRulesParser.K_DESC, 0); }
+		public TerminalNode K_ASC() { return getToken(SQLRulesParser.K_ASC, 0); }
 		public Indexed_columnContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_indexed_column; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterIndexed_column(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterIndexed_column(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitIndexed_column(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitIndexed_column(this);
 		}
 	}
 
@@ -5575,8 +5577,8 @@ public class SQLite2Parser extends Parser {
 		public List<Indexed_columnContext> indexed_column() {
 			return getRuleContexts(Indexed_columnContext.class);
 		}
-		public TerminalNode K_FOREIGN() { return getToken(SQLite2Parser.K_FOREIGN, 0); }
-		public TerminalNode K_PRIMARY() { return getToken(SQLite2Parser.K_PRIMARY, 0); }
+		public TerminalNode K_FOREIGN() { return getToken(SQLRulesParser.K_FOREIGN, 0); }
+		public TerminalNode K_PRIMARY() { return getToken(SQLRulesParser.K_PRIMARY, 0); }
 		public Indexed_columnContext indexed_column(int i) {
 			return getRuleContext(Indexed_columnContext.class,i);
 		}
@@ -5589,10 +5591,10 @@ public class SQLite2Parser extends Parser {
 		public List<Column_nameContext> column_name() {
 			return getRuleContexts(Column_nameContext.class);
 		}
-		public TerminalNode K_CHECK() { return getToken(SQLite2Parser.K_CHECK, 0); }
-		public TerminalNode K_UNIQUE() { return getToken(SQLite2Parser.K_UNIQUE, 0); }
-		public TerminalNode K_KEY() { return getToken(SQLite2Parser.K_KEY, 0); }
-		public TerminalNode K_CONSTRAINT() { return getToken(SQLite2Parser.K_CONSTRAINT, 0); }
+		public TerminalNode K_CHECK() { return getToken(SQLRulesParser.K_CHECK, 0); }
+		public TerminalNode K_UNIQUE() { return getToken(SQLRulesParser.K_UNIQUE, 0); }
+		public TerminalNode K_KEY() { return getToken(SQLRulesParser.K_KEY, 0); }
+		public TerminalNode K_CONSTRAINT() { return getToken(SQLRulesParser.K_CONSTRAINT, 0); }
 		public NameContext name() {
 			return getRuleContext(NameContext.class,0);
 		}
@@ -5608,11 +5610,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_table_constraint; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterTable_constraint(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterTable_constraint(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitTable_constraint(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitTable_constraint(this);
 		}
 	}
 
@@ -5722,8 +5724,8 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class With_clauseContext extends ParserRuleContext {
-		public TerminalNode K_WITH() { return getToken(SQLite2Parser.K_WITH, 0); }
-		public TerminalNode K_RECURSIVE() { return getToken(SQLite2Parser.K_RECURSIVE, 0); }
+		public TerminalNode K_WITH() { return getToken(SQLRulesParser.K_WITH, 0); }
+		public TerminalNode K_RECURSIVE() { return getToken(SQLRulesParser.K_RECURSIVE, 0); }
 		public List<Common_table_expressionContext> common_table_expression() {
 			return getRuleContexts(Common_table_expressionContext.class);
 		}
@@ -5736,11 +5738,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_with_clause; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterWith_clause(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterWith_clause(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitWith_clause(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitWith_clause(this);
 		}
 	}
 
@@ -5789,15 +5791,15 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Qualified_table_nameContext extends ParserRuleContext {
-		public TerminalNode K_INDEXED() { return getToken(SQLite2Parser.K_INDEXED, 0); }
+		public TerminalNode K_INDEXED() { return getToken(SQLRulesParser.K_INDEXED, 0); }
 		public Table_nameContext table_name() {
 			return getRuleContext(Table_nameContext.class,0);
 		}
 		public Index_nameContext index_name() {
 			return getRuleContext(Index_nameContext.class,0);
 		}
-		public TerminalNode K_BY() { return getToken(SQLite2Parser.K_BY, 0); }
-		public TerminalNode K_NOT() { return getToken(SQLite2Parser.K_NOT, 0); }
+		public TerminalNode K_BY() { return getToken(SQLRulesParser.K_BY, 0); }
+		public TerminalNode K_NOT() { return getToken(SQLRulesParser.K_NOT, 0); }
 		public Database_nameContext database_name() {
 			return getRuleContext(Database_nameContext.class,0);
 		}
@@ -5807,11 +5809,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_qualified_table_name; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterQualified_table_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterQualified_table_name(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitQualified_table_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitQualified_table_name(this);
 		}
 	}
 
@@ -5900,20 +5902,20 @@ public class SQLite2Parser extends Parser {
 		public Collation_nameContext collation_name() {
 			return getRuleContext(Collation_nameContext.class,0);
 		}
-		public TerminalNode K_COLLATE() { return getToken(SQLite2Parser.K_COLLATE, 0); }
-		public TerminalNode K_DESC() { return getToken(SQLite2Parser.K_DESC, 0); }
-		public TerminalNode K_ASC() { return getToken(SQLite2Parser.K_ASC, 0); }
+		public TerminalNode K_COLLATE() { return getToken(SQLRulesParser.K_COLLATE, 0); }
+		public TerminalNode K_DESC() { return getToken(SQLRulesParser.K_DESC, 0); }
+		public TerminalNode K_ASC() { return getToken(SQLRulesParser.K_ASC, 0); }
 		public Ordering_termContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_ordering_term; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterOrdering_term(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterOrdering_term(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitOrdering_term(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitOrdering_term(this);
 		}
 	}
 
@@ -5964,7 +5966,7 @@ public class SQLite2Parser extends Parser {
 		public Signed_numberContext signed_number() {
 			return getRuleContext(Signed_numberContext.class,0);
 		}
-		public TerminalNode STRING_LITERAL() { return getToken(SQLite2Parser.STRING_LITERAL, 0); }
+		public TerminalNode STRING_LITERAL() { return getToken(SQLRulesParser.STRING_LITERAL, 0); }
 		public NameContext name() {
 			return getRuleContext(NameContext.class,0);
 		}
@@ -5974,11 +5976,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_pragma_value; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterPragma_value(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterPragma_value(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitPragma_value(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitPragma_value(this);
 		}
 	}
 
@@ -6152,7 +6154,7 @@ public class SQLite2Parser extends Parser {
 		public Column_nameContext column_name(int i) {
 			return getRuleContext(Column_nameContext.class,i);
 		}
-		public TerminalNode K_AS() { return getToken(SQLite2Parser.K_AS, 0); }
+		public TerminalNode K_AS() { return getToken(SQLRulesParser.K_AS, 0); }
 		public List<Column_nameContext> column_name() {
 			return getRuleContexts(Column_nameContext.class);
 		}
@@ -6168,11 +6170,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_common_table_expression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterCommon_table_expression(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterCommon_table_expression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitCommon_table_expression(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitCommon_table_expression(this);
 		}
 	}
 
@@ -6226,7 +6228,7 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Result_columnContext extends ParserRuleContext {
-		public TerminalNode K_AS() { return getToken(SQLite2Parser.K_AS, 0); }
+		public TerminalNode K_AS() { return getToken(SQLRulesParser.K_AS, 0); }
 		public ExprContext expr() {
 			return getRuleContext(ExprContext.class,0);
 		}
@@ -6242,11 +6244,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_result_column; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterResult_column(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterResult_column(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitResult_column(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitResult_column(this);
 		}
 	}
 
@@ -6309,14 +6311,14 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Table_or_subqueryContext extends ParserRuleContext {
-		public TerminalNode K_INDEXED() { return getToken(SQLite2Parser.K_INDEXED, 0); }
+		public TerminalNode K_INDEXED() { return getToken(SQLRulesParser.K_INDEXED, 0); }
 		public ExprContext expr(int i) {
 			return getRuleContext(ExprContext.class,i);
 		}
 		public Join_clauseContext join_clause() {
 			return getRuleContext(Join_clauseContext.class,0);
 		}
-		public TerminalNode K_AS() { return getToken(SQLite2Parser.K_AS, 0); }
+		public TerminalNode K_AS() { return getToken(SQLRulesParser.K_AS, 0); }
 		public List<ExprContext> expr() {
 			return getRuleContexts(ExprContext.class);
 		}
@@ -6329,8 +6331,8 @@ public class SQLite2Parser extends Parser {
 		public List<Table_or_subqueryContext> table_or_subquery() {
 			return getRuleContexts(Table_or_subqueryContext.class);
 		}
-		public TerminalNode K_BY() { return getToken(SQLite2Parser.K_BY, 0); }
-		public TerminalNode K_NOT() { return getToken(SQLite2Parser.K_NOT, 0); }
+		public TerminalNode K_BY() { return getToken(SQLRulesParser.K_BY, 0); }
+		public TerminalNode K_NOT() { return getToken(SQLRulesParser.K_NOT, 0); }
 		public Table_function_nameContext table_function_name() {
 			return getRuleContext(Table_function_nameContext.class,0);
 		}
@@ -6352,11 +6354,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_table_or_subquery; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterTable_or_subquery(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterTable_or_subquery(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitTable_or_subquery(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitTable_or_subquery(this);
 		}
 	}
 
@@ -6476,7 +6478,7 @@ public class SQLite2Parser extends Parser {
 				setState(1448); match(OPEN_PAR);
 				setState(1457);
 				_la = _input.LA(1);
-				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << OPEN_PAR) | (1L << PLUS) | (1L << MINUS) | (1L << TILDE) | (1L << K_ABORT) | (1L << K_ACTION) | (1L << K_ADD) | (1L << K_AFTER) | (1L << K_ALL) | (1L << K_ALTER) | (1L << K_ANALYZE) | (1L << K_AND) | (1L << K_AS) | (1L << K_ASC) | (1L << K_ATTACH) | (1L << K_AUTOINCREMENT) | (1L << K_BEFORE) | (1L << K_BEGIN) | (1L << K_BETWEEN) | (1L << K_BY) | (1L << K_CASCADE) | (1L << K_CASE) | (1L << K_CAST) | (1L << K_CHECK) | (1L << K_COLLATE) | (1L << K_COLUMN) | (1L << K_COMMIT) | (1L << K_CONFLICT) | (1L << K_CONSTRAINT) | (1L << K_CREATE) | (1L << K_CROSS) | (1L << K_CURRENT_DATE) | (1L << K_CURRENT_TIME) | (1L << K_CURRENT_TIMESTAMP) | (1L << K_DATABASE) | (1L << K_DEFAULT) | (1L << K_DEFERRABLE) | (1L << K_DEFERRED) | (1L << K_DELETE) | (1L << K_DESC) | (1L << K_DETACH) | (1L << K_DISTINCT) | (1L << K_DROP))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (K_EACH - 64)) | (1L << (K_ELSE - 64)) | (1L << (K_END - 64)) | (1L << (K_ESCAPE - 64)) | (1L << (K_EXCEPT - 64)) | (1L << (K_EXCLUSIVE - 64)) | (1L << (K_EXISTS - 64)) | (1L << (K_EXPLAIN - 64)) | (1L << (K_FAIL - 64)) | (1L << (K_FOR - 64)) | (1L << (K_FOREIGN - 64)) | (1L << (K_FROM - 64)) | (1L << (K_FULL - 64)) | (1L << (K_GLOB - 64)) | (1L << (K_GROUP - 64)) | (1L << (K_HAVING - 64)) | (1L << (K_IF - 64)) | (1L << (K_IGNORE - 64)) | (1L << (K_IMMEDIATE - 64)) | (1L << (K_IN - 64)) | (1L << (K_INDEX - 64)) | (1L << (K_INDEXED - 64)) | (1L << (K_INITIALLY - 64)) | (1L << (K_INNER - 64)) | (1L << (K_INSERT - 64)) | (1L << (K_INSTEAD - 64)) | (1L << (K_INTERSECT - 64)) | (1L << (K_INTO - 64)) | (1L << (K_IS - 64)) | (1L << (K_ISNULL - 64)) | (1L << (K_JOIN - 64)) | (1L << (K_KEY - 64)) | (1L << (K_LEFT - 64)) | (1L << (K_LIKE - 64)) | (1L << (K_LIMIT - 64)) | (1L << (K_MATCH - 64)) | (1L << (K_NATURAL - 64)) | (1L << (K_NO - 64)) | (1L << (K_NOT - 64)) | (1L << (K_NOTNULL - 64)) | (1L << (K_NULL - 64)) | (1L << (K_OF - 64)) | (1L << (K_OFFSET - 64)) | (1L << (K_ON - 64)) | (1L << (K_OR - 64)) | (1L << (K_ORDER - 64)) | (1L << (K_OUTER - 64)) | (1L << (K_PLAN - 64)) | (1L << (K_PRAGMA - 64)) | (1L << (K_PRIMARY - 64)) | (1L << (K_QUERY - 64)) | (1L << (K_RAISE - 64)) | (1L << (K_RECURSIVE - 64)) | (1L << (K_REFERENCES - 64)) | (1L << (K_REGEXP - 64)) | (1L << (K_REINDEX - 64)) | (1L << (K_RELEASE - 64)) | (1L << (K_RENAME - 64)) | (1L << (K_REPLACE - 64)) | (1L << (K_RESTRICT - 64)) | (1L << (K_RIGHT - 64)) | (1L << (K_ROLLBACK - 64)) | (1L << (K_ROW - 64)) | (1L << (K_SAVEPOINT - 64)))) != 0) || ((((_la - 128)) & ~0x3f) == 0 && ((1L << (_la - 128)) & ((1L << (K_SELECT - 128)) | (1L << (K_SET - 128)) | (1L << (K_TABLE - 128)) | (1L << (K_TEMP - 128)) | (1L << (K_TEMPORARY - 128)) | (1L << (K_THEN - 128)) | (1L << (K_TO - 128)) | (1L << (K_TRANSACTION - 128)) | (1L << (K_TRIGGER - 128)) | (1L << (K_UNION - 128)) | (1L << (K_UNIQUE - 128)) | (1L << (K_UPDATE - 128)) | (1L << (K_USING - 128)) | (1L << (K_VACUUM - 128)) | (1L << (K_VALUES - 128)) | (1L << (K_VIEW - 128)) | (1L << (K_VIRTUAL - 128)) | (1L << (K_WHEN - 128)) | (1L << (K_WHERE - 128)) | (1L << (K_WITH - 128)) | (1L << (K_WITHOUT - 128)) | (1L << (IDENTIFIER - 128)) | (1L << (STRING_VALUE - 128)) | (1L << (NUMERIC_LITERAL - 128)) | (1L << (BIND_PARAMETER - 128)) | (1L << (STRING_LITERAL - 128)) | (1L << (BLOB_LITERAL - 128)))) != 0)) {
+				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << OPEN_PAR) | (1L << PLUS) | (1L << MINUS) | (1L << TILDE) | (1L << K_ABORT) | (1L << K_ACTION) | (1L << K_ADD) | (1L << K_AFTER) | (1L << K_ALL) | (1L << K_ALTER) | (1L << K_ANALYZE) | (1L << K_AND) | (1L << K_AS) | (1L << K_ASC) | (1L << K_ATTACH) | (1L << K_AUTOINCREMENT) | (1L << K_BEFORE) | (1L << K_BEGIN) | (1L << K_BETWEEN) | (1L << K_BY) | (1L << K_CASCADE) | (1L << K_CASE) | (1L << K_CAST) | (1L << K_CHECK) | (1L << K_COLLATE) | (1L << K_COLUMN) | (1L << K_COMMIT) | (1L << K_CONFLICT) | (1L << K_CONSTRAINT) | (1L << K_CREATE) | (1L << K_CROSS) | (1L << K_CURRENT_DATE) | (1L << K_CURRENT_TIME) | (1L << K_CURRENT_TIMESTAMP) | (1L << K_DATABASE) | (1L << K_DEFAULT) | (1L << K_DEFERRABLE) | (1L << K_DEFERRED) | (1L << K_DELETE) | (1L << K_DESC) | (1L << K_DETACH) | (1L << K_DISTINCT) | (1L << K_DROP))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (K_EACH - 64)) | (1L << (K_ELSE - 64)) | (1L << (K_END - 64)) | (1L << (K_ESCAPE - 64)) | (1L << (K_EXCEPT - 64)) | (1L << (K_EXCLUSIVE - 64)) | (1L << (K_EXISTS - 64)) | (1L << (K_EXPLAIN - 64)) | (1L << (K_FAIL - 64)) | (1L << (K_FOR - 64)) | (1L << (K_FOREIGN - 64)) | (1L << (K_FROM - 64)) | (1L << (K_FULL - 64)) | (1L << (K_GLOB - 64)) | (1L << (K_GROUP - 64)) | (1L << (K_HAVING - 64)) | (1L << (K_IF - 64)) | (1L << (K_IGNORE - 64)) | (1L << (K_IMMEDIATE - 64)) | (1L << (K_IN - 64)) | (1L << (K_INDEX - 64)) | (1L << (K_INDEXED - 64)) | (1L << (K_INITIALLY - 64)) | (1L << (K_INNER - 64)) | (1L << (K_INSERT - 64)) | (1L << (K_INSTEAD - 64)) | (1L << (K_INTERSECT - 64)) | (1L << (K_INTO - 64)) | (1L << (K_IS - 64)) | (1L << (K_ISNULL - 64)) | (1L << (K_JOIN - 64)) | (1L << (K_KEY - 64)) | (1L << (K_LEFT - 64)) | (1L << (K_LIKE - 64)) | (1L << (K_LIMIT - 64)) | (1L << (K_MATCH - 64)) | (1L << (K_NATURAL - 64)) | (1L << (K_NO - 64)) | (1L << (K_NOT - 64)) | (1L << (K_NOTNULL - 64)) | (1L << (K_NULL - 64)) | (1L << (K_OF - 64)) | (1L << (K_OFFSET - 64)) | (1L << (K_ON - 64)) | (1L << (K_OR - 64)) | (1L << (K_ORDER - 64)) | (1L << (K_OUTER - 64)) | (1L << (K_PLAN - 64)) | (1L << (K_PRAGMA - 64)) | (1L << (K_PRIMARY - 64)) | (1L << (K_QUERY - 64)) | (1L << (K_RAISE - 64)) | (1L << (K_RECURSIVE - 64)) | (1L << (K_REFERENCES - 64)) | (1L << (K_REGEXP - 64)) | (1L << (K_REINDEX - 64)) | (1L << (K_RELEASE - 64)) | (1L << (K_RENAME - 64)) | (1L << (K_REPLACE - 64)) | (1L << (K_RESTRICT - 64)) | (1L << (K_RIGHT - 64)) | (1L << (K_ROLLBACK - 64)) | (1L << (K_ROW - 64)) | (1L << (K_SAVEPOINT - 64)))) != 0) || ((((_la - 128)) & ~0x3f) == 0 && ((1L << (_la - 128)) & ((1L << (K_SELECT - 128)) | (1L << (K_SET - 128)) | (1L << (K_TABLE - 128)) | (1L << (K_TEMP - 128)) | (1L << (K_TEMPORARY - 128)) | (1L << (K_THEN - 128)) | (1L << (K_TO - 128)) | (1L << (K_TRANSACTION - 128)) | (1L << (K_TRIGGER - 128)) | (1L << (K_UNION - 128)) | (1L << (K_UNIQUE - 128)) | (1L << (K_UPDATE - 128)) | (1L << (K_USING - 128)) | (1L << (K_VACUUM - 128)) | (1L << (K_VALUES - 128)) | (1L << (K_VIEW - 128)) | (1L << (K_VIRTUAL - 128)) | (1L << (K_WHEN - 128)) | (1L << (K_WHERE - 128)) | (1L << (K_WITH - 128)) | (1L << (K_WITHOUT - 128)) | (1L << (IDENTIFIER - 128)) | (1L << (STRING_VALUE - 128)) | (1L << (NUMERIC_LITERAL - 128)) | (1L << (BIND_PARAMETER - 128)) | (1L << (BLOB_LITERAL - 128)))) != 0)) {
 					{
 					setState(1449); expr(0);
 					setState(1454);
@@ -6614,11 +6616,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_join_clause; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterJoin_clause(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterJoin_clause(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitJoin_clause(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitJoin_clause(this);
 		}
 	}
 
@@ -6659,23 +6661,23 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Join_operatorContext extends ParserRuleContext {
-		public TerminalNode K_CROSS() { return getToken(SQLite2Parser.K_CROSS, 0); }
-		public TerminalNode K_OUTER() { return getToken(SQLite2Parser.K_OUTER, 0); }
-		public TerminalNode K_INNER() { return getToken(SQLite2Parser.K_INNER, 0); }
-		public TerminalNode K_NATURAL() { return getToken(SQLite2Parser.K_NATURAL, 0); }
-		public TerminalNode K_JOIN() { return getToken(SQLite2Parser.K_JOIN, 0); }
-		public TerminalNode K_LEFT() { return getToken(SQLite2Parser.K_LEFT, 0); }
+		public TerminalNode K_CROSS() { return getToken(SQLRulesParser.K_CROSS, 0); }
+		public TerminalNode K_OUTER() { return getToken(SQLRulesParser.K_OUTER, 0); }
+		public TerminalNode K_INNER() { return getToken(SQLRulesParser.K_INNER, 0); }
+		public TerminalNode K_NATURAL() { return getToken(SQLRulesParser.K_NATURAL, 0); }
+		public TerminalNode K_JOIN() { return getToken(SQLRulesParser.K_JOIN, 0); }
+		public TerminalNode K_LEFT() { return getToken(SQLRulesParser.K_LEFT, 0); }
 		public Join_operatorContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_join_operator; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterJoin_operator(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterJoin_operator(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitJoin_operator(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitJoin_operator(this);
 		}
 	}
 
@@ -6759,25 +6761,25 @@ public class SQLite2Parser extends Parser {
 		public Column_nameContext column_name(int i) {
 			return getRuleContext(Column_nameContext.class,i);
 		}
-		public TerminalNode K_ON() { return getToken(SQLite2Parser.K_ON, 0); }
+		public TerminalNode K_ON() { return getToken(SQLRulesParser.K_ON, 0); }
 		public ExprContext expr() {
 			return getRuleContext(ExprContext.class,0);
 		}
 		public List<Column_nameContext> column_name() {
 			return getRuleContexts(Column_nameContext.class);
 		}
-		public TerminalNode K_USING() { return getToken(SQLite2Parser.K_USING, 0); }
+		public TerminalNode K_USING() { return getToken(SQLRulesParser.K_USING, 0); }
 		public Join_constraintContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_join_constraint; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterJoin_constraint(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterJoin_constraint(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitJoin_constraint(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitJoin_constraint(this);
 		}
 	}
 
@@ -6876,7 +6878,7 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Select_coreContext extends ParserRuleContext {
-		public TerminalNode K_WHERE() { return getToken(SQLite2Parser.K_WHERE, 0); }
+		public TerminalNode K_WHERE() { return getToken(SQLRulesParser.K_WHERE, 0); }
 		public ExprContext expr(int i) {
 			return getRuleContext(ExprContext.class,i);
 		}
@@ -6886,23 +6888,23 @@ public class SQLite2Parser extends Parser {
 		public Result_columnContext result_column(int i) {
 			return getRuleContext(Result_columnContext.class,i);
 		}
-		public TerminalNode K_FROM() { return getToken(SQLite2Parser.K_FROM, 0); }
+		public TerminalNode K_FROM() { return getToken(SQLRulesParser.K_FROM, 0); }
 		public Join_clauseContext join_clause() {
 			return getRuleContext(Join_clauseContext.class,0);
 		}
-		public TerminalNode K_ALL() { return getToken(SQLite2Parser.K_ALL, 0); }
+		public TerminalNode K_ALL() { return getToken(SQLRulesParser.K_ALL, 0); }
 		public List<ExprContext> expr() {
 			return getRuleContexts(ExprContext.class);
 		}
-		public TerminalNode K_GROUP() { return getToken(SQLite2Parser.K_GROUP, 0); }
-		public TerminalNode K_DISTINCT() { return getToken(SQLite2Parser.K_DISTINCT, 0); }
-		public TerminalNode K_HAVING() { return getToken(SQLite2Parser.K_HAVING, 0); }
-		public TerminalNode K_VALUES() { return getToken(SQLite2Parser.K_VALUES, 0); }
+		public TerminalNode K_GROUP() { return getToken(SQLRulesParser.K_GROUP, 0); }
+		public TerminalNode K_DISTINCT() { return getToken(SQLRulesParser.K_DISTINCT, 0); }
+		public TerminalNode K_HAVING() { return getToken(SQLRulesParser.K_HAVING, 0); }
+		public TerminalNode K_VALUES() { return getToken(SQLRulesParser.K_VALUES, 0); }
 		public List<Table_or_subqueryContext> table_or_subquery() {
 			return getRuleContexts(Table_or_subqueryContext.class);
 		}
-		public TerminalNode K_SELECT() { return getToken(SQLite2Parser.K_SELECT, 0); }
-		public TerminalNode K_BY() { return getToken(SQLite2Parser.K_BY, 0); }
+		public TerminalNode K_SELECT() { return getToken(SQLRulesParser.K_SELECT, 0); }
+		public TerminalNode K_BY() { return getToken(SQLRulesParser.K_BY, 0); }
 		public Table_or_subqueryContext table_or_subquery(int i) {
 			return getRuleContext(Table_or_subqueryContext.class,i);
 		}
@@ -6912,11 +6914,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_select_core; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterSelect_core(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterSelect_core(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitSelect_core(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitSelect_core(this);
 		}
 	}
 
@@ -7108,21 +7110,21 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Compound_operatorContext extends ParserRuleContext {
-		public TerminalNode K_ALL() { return getToken(SQLite2Parser.K_ALL, 0); }
-		public TerminalNode K_INTERSECT() { return getToken(SQLite2Parser.K_INTERSECT, 0); }
-		public TerminalNode K_EXCEPT() { return getToken(SQLite2Parser.K_EXCEPT, 0); }
-		public TerminalNode K_UNION() { return getToken(SQLite2Parser.K_UNION, 0); }
+		public TerminalNode K_ALL() { return getToken(SQLRulesParser.K_ALL, 0); }
+		public TerminalNode K_INTERSECT() { return getToken(SQLRulesParser.K_INTERSECT, 0); }
+		public TerminalNode K_EXCEPT() { return getToken(SQLRulesParser.K_EXCEPT, 0); }
+		public TerminalNode K_UNION() { return getToken(SQLRulesParser.K_UNION, 0); }
 		public Compound_operatorContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_compound_operator; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterCompound_operator(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterCompound_operator(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitCompound_operator(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitCompound_operator(this);
 		}
 	}
 
@@ -7174,18 +7176,18 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Signed_numberContext extends ParserRuleContext {
-		public TerminalNode NUMERIC_LITERAL() { return getToken(SQLite2Parser.NUMERIC_LITERAL, 0); }
+		public TerminalNode NUMERIC_LITERAL() { return getToken(SQLRulesParser.NUMERIC_LITERAL, 0); }
 		public Signed_numberContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_signed_number; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterSigned_number(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterSigned_number(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitSigned_number(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitSigned_number(this);
 		}
 	}
 
@@ -7224,24 +7226,23 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Literal_valueContext extends ParserRuleContext {
-		public TerminalNode K_CURRENT_DATE() { return getToken(SQLite2Parser.K_CURRENT_DATE, 0); }
-		public TerminalNode NUMERIC_LITERAL() { return getToken(SQLite2Parser.NUMERIC_LITERAL, 0); }
-		public TerminalNode K_NULL() { return getToken(SQLite2Parser.K_NULL, 0); }
-		public TerminalNode STRING_LITERAL() { return getToken(SQLite2Parser.STRING_LITERAL, 0); }
-		public TerminalNode K_CURRENT_TIMESTAMP() { return getToken(SQLite2Parser.K_CURRENT_TIMESTAMP, 0); }
-		public TerminalNode K_CURRENT_TIME() { return getToken(SQLite2Parser.K_CURRENT_TIME, 0); }
-		public TerminalNode BLOB_LITERAL() { return getToken(SQLite2Parser.BLOB_LITERAL, 0); }
+		public TerminalNode K_CURRENT_DATE() { return getToken(SQLRulesParser.K_CURRENT_DATE, 0); }
+		public TerminalNode NUMERIC_LITERAL() { return getToken(SQLRulesParser.NUMERIC_LITERAL, 0); }
+		public TerminalNode K_NULL() { return getToken(SQLRulesParser.K_NULL, 0); }
+		public TerminalNode K_CURRENT_TIMESTAMP() { return getToken(SQLRulesParser.K_CURRENT_TIMESTAMP, 0); }
+		public TerminalNode K_CURRENT_TIME() { return getToken(SQLRulesParser.K_CURRENT_TIME, 0); }
+		public TerminalNode BLOB_LITERAL() { return getToken(SQLRulesParser.BLOB_LITERAL, 0); }
 		public Literal_valueContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_literal_value; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterLiteral_value(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterLiteral_value(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitLiteral_value(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitLiteral_value(this);
 		}
 	}
 
@@ -7254,7 +7255,7 @@ public class SQLite2Parser extends Parser {
 			{
 			setState(1620);
 			_la = _input.LA(1);
-			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << K_CURRENT_DATE) | (1L << K_CURRENT_TIME) | (1L << K_CURRENT_TIMESTAMP))) != 0) || ((((_la - 104)) & ~0x3f) == 0 && ((1L << (_la - 104)) & ((1L << (K_NULL - 104)) | (1L << (NUMERIC_LITERAL - 104)) | (1L << (STRING_LITERAL - 104)) | (1L << (BLOB_LITERAL - 104)))) != 0)) ) {
+			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << K_CURRENT_DATE) | (1L << K_CURRENT_TIME) | (1L << K_CURRENT_TIMESTAMP))) != 0) || ((((_la - 104)) & ~0x3f) == 0 && ((1L << (_la - 104)) & ((1L << (K_NULL - 104)) | (1L << (NUMERIC_LITERAL - 104)) | (1L << (BLOB_LITERAL - 104)))) != 0)) ) {
 			_errHandler.recoverInline(this);
 			}
 			consume();
@@ -7272,18 +7273,18 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Unary_operatorContext extends ParserRuleContext {
-		public TerminalNode K_NOT() { return getToken(SQLite2Parser.K_NOT, 0); }
+		public TerminalNode K_NOT() { return getToken(SQLRulesParser.K_NOT, 0); }
 		public Unary_operatorContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_unary_operator; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterUnary_operator(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterUnary_operator(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitUnary_operator(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitUnary_operator(this);
 		}
 	}
 
@@ -7314,18 +7315,18 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Error_messageContext extends ParserRuleContext {
-		public TerminalNode STRING_LITERAL() { return getToken(SQLite2Parser.STRING_LITERAL, 0); }
+		public TerminalNode STRING_LITERAL() { return getToken(SQLRulesParser.STRING_LITERAL, 0); }
 		public Error_messageContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_error_message; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterError_message(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterError_message(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitError_message(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitError_message(this);
 		}
 	}
 
@@ -7362,11 +7363,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_module_argument; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterModule_argument(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterModule_argument(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitModule_argument(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitModule_argument(this);
 		}
 	}
 
@@ -7403,19 +7404,19 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Column_aliasContext extends ParserRuleContext {
-		public TerminalNode STRING_LITERAL() { return getToken(SQLite2Parser.STRING_LITERAL, 0); }
-		public TerminalNode IDENTIFIER() { return getToken(SQLite2Parser.IDENTIFIER, 0); }
+		public TerminalNode STRING_LITERAL() { return getToken(SQLRulesParser.STRING_LITERAL, 0); }
+		public TerminalNode IDENTIFIER() { return getToken(SQLRulesParser.IDENTIFIER, 0); }
 		public Column_aliasContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_column_alias; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterColumn_alias(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterColumn_alias(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitColumn_alias(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitColumn_alias(this);
 		}
 	}
 
@@ -7446,141 +7447,141 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class KeywordContext extends ParserRuleContext {
-		public TerminalNode K_INDEXED() { return getToken(SQLite2Parser.K_INDEXED, 0); }
-		public TerminalNode K_RECURSIVE() { return getToken(SQLite2Parser.K_RECURSIVE, 0); }
-		public TerminalNode K_DETACH() { return getToken(SQLite2Parser.K_DETACH, 0); }
-		public TerminalNode K_CASCADE() { return getToken(SQLite2Parser.K_CASCADE, 0); }
-		public TerminalNode K_COLLATE() { return getToken(SQLite2Parser.K_COLLATE, 0); }
-		public TerminalNode K_VACUUM() { return getToken(SQLite2Parser.K_VACUUM, 0); }
-		public TerminalNode K_COLUMN() { return getToken(SQLite2Parser.K_COLUMN, 0); }
-		public TerminalNode K_DROP() { return getToken(SQLite2Parser.K_DROP, 0); }
-		public TerminalNode K_VIEW() { return getToken(SQLite2Parser.K_VIEW, 0); }
-		public TerminalNode K_CONSTRAINT() { return getToken(SQLite2Parser.K_CONSTRAINT, 0); }
-		public TerminalNode K_TEMPORARY() { return getToken(SQLite2Parser.K_TEMPORARY, 0); }
-		public TerminalNode K_VIRTUAL() { return getToken(SQLite2Parser.K_VIRTUAL, 0); }
-		public TerminalNode K_AUTOINCREMENT() { return getToken(SQLite2Parser.K_AUTOINCREMENT, 0); }
-		public TerminalNode K_BEGIN() { return getToken(SQLite2Parser.K_BEGIN, 0); }
-		public TerminalNode K_OF() { return getToken(SQLite2Parser.K_OF, 0); }
-		public TerminalNode K_CROSS() { return getToken(SQLite2Parser.K_CROSS, 0); }
-		public TerminalNode K_CURRENT_DATE() { return getToken(SQLite2Parser.K_CURRENT_DATE, 0); }
-		public TerminalNode K_CREATE() { return getToken(SQLite2Parser.K_CREATE, 0); }
-		public TerminalNode K_IN() { return getToken(SQLite2Parser.K_IN, 0); }
-		public TerminalNode K_VALUES() { return getToken(SQLite2Parser.K_VALUES, 0); }
-		public TerminalNode K_UNION() { return getToken(SQLite2Parser.K_UNION, 0); }
-		public TerminalNode K_RAISE() { return getToken(SQLite2Parser.K_RAISE, 0); }
-		public TerminalNode K_ADD() { return getToken(SQLite2Parser.K_ADD, 0); }
-		public TerminalNode K_OFFSET() { return getToken(SQLite2Parser.K_OFFSET, 0); }
-		public TerminalNode K_REPLACE() { return getToken(SQLite2Parser.K_REPLACE, 0); }
-		public TerminalNode K_TRIGGER() { return getToken(SQLite2Parser.K_TRIGGER, 0); }
-		public TerminalNode K_SAVEPOINT() { return getToken(SQLite2Parser.K_SAVEPOINT, 0); }
-		public TerminalNode K_DATABASE() { return getToken(SQLite2Parser.K_DATABASE, 0); }
-		public TerminalNode K_INSERT() { return getToken(SQLite2Parser.K_INSERT, 0); }
-		public TerminalNode K_LIMIT() { return getToken(SQLite2Parser.K_LIMIT, 0); }
-		public TerminalNode K_COMMIT() { return getToken(SQLite2Parser.K_COMMIT, 0); }
-		public TerminalNode K_EXISTS() { return getToken(SQLite2Parser.K_EXISTS, 0); }
-		public TerminalNode K_CONFLICT() { return getToken(SQLite2Parser.K_CONFLICT, 0); }
-		public TerminalNode K_DESC() { return getToken(SQLite2Parser.K_DESC, 0); }
-		public TerminalNode K_TEMP() { return getToken(SQLite2Parser.K_TEMP, 0); }
-		public TerminalNode K_TO() { return getToken(SQLite2Parser.K_TO, 0); }
-		public TerminalNode K_TRANSACTION() { return getToken(SQLite2Parser.K_TRANSACTION, 0); }
-		public TerminalNode K_QUERY() { return getToken(SQLite2Parser.K_QUERY, 0); }
-		public TerminalNode K_IS() { return getToken(SQLite2Parser.K_IS, 0); }
-		public TerminalNode K_RELEASE() { return getToken(SQLite2Parser.K_RELEASE, 0); }
-		public TerminalNode K_DEFERRABLE() { return getToken(SQLite2Parser.K_DEFERRABLE, 0); }
-		public TerminalNode K_IGNORE() { return getToken(SQLite2Parser.K_IGNORE, 0); }
-		public TerminalNode K_SELECT() { return getToken(SQLite2Parser.K_SELECT, 0); }
-		public TerminalNode K_FOR() { return getToken(SQLite2Parser.K_FOR, 0); }
-		public TerminalNode K_EXCEPT() { return getToken(SQLite2Parser.K_EXCEPT, 0); }
-		public TerminalNode K_OR() { return getToken(SQLite2Parser.K_OR, 0); }
-		public TerminalNode K_BEFORE() { return getToken(SQLite2Parser.K_BEFORE, 0); }
-		public TerminalNode K_RENAME() { return getToken(SQLite2Parser.K_RENAME, 0); }
-		public TerminalNode K_INTO() { return getToken(SQLite2Parser.K_INTO, 0); }
-		public TerminalNode K_WHERE() { return getToken(SQLite2Parser.K_WHERE, 0); }
-		public TerminalNode K_INTERSECT() { return getToken(SQLite2Parser.K_INTERSECT, 0); }
-		public TerminalNode K_FROM() { return getToken(SQLite2Parser.K_FROM, 0); }
-		public TerminalNode K_EACH() { return getToken(SQLite2Parser.K_EACH, 0); }
-		public TerminalNode K_GLOB() { return getToken(SQLite2Parser.K_GLOB, 0); }
-		public TerminalNode K_ROLLBACK() { return getToken(SQLite2Parser.K_ROLLBACK, 0); }
-		public TerminalNode K_LEFT() { return getToken(SQLite2Parser.K_LEFT, 0); }
-		public TerminalNode K_FULL() { return getToken(SQLite2Parser.K_FULL, 0); }
-		public TerminalNode K_GROUP() { return getToken(SQLite2Parser.K_GROUP, 0); }
-		public TerminalNode K_REFERENCES() { return getToken(SQLite2Parser.K_REFERENCES, 0); }
-		public TerminalNode K_UPDATE() { return getToken(SQLite2Parser.K_UPDATE, 0); }
-		public TerminalNode K_ACTION() { return getToken(SQLite2Parser.K_ACTION, 0); }
-		public TerminalNode K_CURRENT_TIME() { return getToken(SQLite2Parser.K_CURRENT_TIME, 0); }
-		public TerminalNode K_END() { return getToken(SQLite2Parser.K_END, 0); }
-		public TerminalNode K_ASC() { return getToken(SQLite2Parser.K_ASC, 0); }
-		public TerminalNode K_THEN() { return getToken(SQLite2Parser.K_THEN, 0); }
-		public TerminalNode K_RESTRICT() { return getToken(SQLite2Parser.K_RESTRICT, 0); }
-		public TerminalNode K_FOREIGN() { return getToken(SQLite2Parser.K_FOREIGN, 0); }
-		public TerminalNode K_EXPLAIN() { return getToken(SQLite2Parser.K_EXPLAIN, 0); }
-		public TerminalNode K_INSTEAD() { return getToken(SQLite2Parser.K_INSTEAD, 0); }
-		public TerminalNode K_WITH() { return getToken(SQLite2Parser.K_WITH, 0); }
-		public TerminalNode K_ISNULL() { return getToken(SQLite2Parser.K_ISNULL, 0); }
-		public TerminalNode K_ORDER() { return getToken(SQLite2Parser.K_ORDER, 0); }
-		public TerminalNode K_OUTER() { return getToken(SQLite2Parser.K_OUTER, 0); }
-		public TerminalNode K_SET() { return getToken(SQLite2Parser.K_SET, 0); }
-		public TerminalNode K_UNIQUE() { return getToken(SQLite2Parser.K_UNIQUE, 0); }
-		public TerminalNode K_KEY() { return getToken(SQLite2Parser.K_KEY, 0); }
-		public TerminalNode K_CAST() { return getToken(SQLite2Parser.K_CAST, 0); }
-		public TerminalNode K_NO() { return getToken(SQLite2Parser.K_NO, 0); }
-		public TerminalNode K_AFTER() { return getToken(SQLite2Parser.K_AFTER, 0); }
-		public TerminalNode K_PLAN() { return getToken(SQLite2Parser.K_PLAN, 0); }
-		public TerminalNode K_ROW() { return getToken(SQLite2Parser.K_ROW, 0); }
-		public TerminalNode K_IMMEDIATE() { return getToken(SQLite2Parser.K_IMMEDIATE, 0); }
-		public TerminalNode K_PRIMARY() { return getToken(SQLite2Parser.K_PRIMARY, 0); }
-		public TerminalNode K_ON() { return getToken(SQLite2Parser.K_ON, 0); }
-		public TerminalNode K_DISTINCT() { return getToken(SQLite2Parser.K_DISTINCT, 0); }
-		public TerminalNode K_HAVING() { return getToken(SQLite2Parser.K_HAVING, 0); }
-		public TerminalNode K_ALTER() { return getToken(SQLite2Parser.K_ALTER, 0); }
-		public TerminalNode K_CURRENT_TIMESTAMP() { return getToken(SQLite2Parser.K_CURRENT_TIMESTAMP, 0); }
-		public TerminalNode K_NOTNULL() { return getToken(SQLite2Parser.K_NOTNULL, 0); }
-		public TerminalNode K_DEFAULT() { return getToken(SQLite2Parser.K_DEFAULT, 0); }
-		public TerminalNode K_INNER() { return getToken(SQLite2Parser.K_INNER, 0); }
-		public TerminalNode K_DELETE() { return getToken(SQLite2Parser.K_DELETE, 0); }
-		public TerminalNode K_RIGHT() { return getToken(SQLite2Parser.K_RIGHT, 0); }
-		public TerminalNode K_CASE() { return getToken(SQLite2Parser.K_CASE, 0); }
-		public TerminalNode K_MATCH() { return getToken(SQLite2Parser.K_MATCH, 0); }
-		public TerminalNode K_INITIALLY() { return getToken(SQLite2Parser.K_INITIALLY, 0); }
-		public TerminalNode K_EXCLUSIVE() { return getToken(SQLite2Parser.K_EXCLUSIVE, 0); }
-		public TerminalNode K_CHECK() { return getToken(SQLite2Parser.K_CHECK, 0); }
-		public TerminalNode K_NULL() { return getToken(SQLite2Parser.K_NULL, 0); }
-		public TerminalNode K_REINDEX() { return getToken(SQLite2Parser.K_REINDEX, 0); }
-		public TerminalNode K_BY() { return getToken(SQLite2Parser.K_BY, 0); }
-		public TerminalNode K_ABORT() { return getToken(SQLite2Parser.K_ABORT, 0); }
-		public TerminalNode K_WHEN() { return getToken(SQLite2Parser.K_WHEN, 0); }
-		public TerminalNode K_BETWEEN() { return getToken(SQLite2Parser.K_BETWEEN, 0); }
-		public TerminalNode K_REGEXP() { return getToken(SQLite2Parser.K_REGEXP, 0); }
-		public TerminalNode K_IF() { return getToken(SQLite2Parser.K_IF, 0); }
-		public TerminalNode K_TABLE() { return getToken(SQLite2Parser.K_TABLE, 0); }
-		public TerminalNode K_LIKE() { return getToken(SQLite2Parser.K_LIKE, 0); }
-		public TerminalNode K_DEFERRED() { return getToken(SQLite2Parser.K_DEFERRED, 0); }
-		public TerminalNode K_ANALYZE() { return getToken(SQLite2Parser.K_ANALYZE, 0); }
-		public TerminalNode K_JOIN() { return getToken(SQLite2Parser.K_JOIN, 0); }
-		public TerminalNode K_FAIL() { return getToken(SQLite2Parser.K_FAIL, 0); }
-		public TerminalNode K_PRAGMA() { return getToken(SQLite2Parser.K_PRAGMA, 0); }
-		public TerminalNode K_INDEX() { return getToken(SQLite2Parser.K_INDEX, 0); }
-		public TerminalNode K_AS() { return getToken(SQLite2Parser.K_AS, 0); }
-		public TerminalNode K_ELSE() { return getToken(SQLite2Parser.K_ELSE, 0); }
-		public TerminalNode K_ALL() { return getToken(SQLite2Parser.K_ALL, 0); }
-		public TerminalNode K_ATTACH() { return getToken(SQLite2Parser.K_ATTACH, 0); }
-		public TerminalNode K_AND() { return getToken(SQLite2Parser.K_AND, 0); }
-		public TerminalNode K_USING() { return getToken(SQLite2Parser.K_USING, 0); }
-		public TerminalNode K_WITHOUT() { return getToken(SQLite2Parser.K_WITHOUT, 0); }
-		public TerminalNode K_NATURAL() { return getToken(SQLite2Parser.K_NATURAL, 0); }
-		public TerminalNode K_NOT() { return getToken(SQLite2Parser.K_NOT, 0); }
-		public TerminalNode K_ESCAPE() { return getToken(SQLite2Parser.K_ESCAPE, 0); }
+		public TerminalNode K_INDEXED() { return getToken(SQLRulesParser.K_INDEXED, 0); }
+		public TerminalNode K_RECURSIVE() { return getToken(SQLRulesParser.K_RECURSIVE, 0); }
+		public TerminalNode K_DETACH() { return getToken(SQLRulesParser.K_DETACH, 0); }
+		public TerminalNode K_CASCADE() { return getToken(SQLRulesParser.K_CASCADE, 0); }
+		public TerminalNode K_COLLATE() { return getToken(SQLRulesParser.K_COLLATE, 0); }
+		public TerminalNode K_VACUUM() { return getToken(SQLRulesParser.K_VACUUM, 0); }
+		public TerminalNode K_COLUMN() { return getToken(SQLRulesParser.K_COLUMN, 0); }
+		public TerminalNode K_DROP() { return getToken(SQLRulesParser.K_DROP, 0); }
+		public TerminalNode K_VIEW() { return getToken(SQLRulesParser.K_VIEW, 0); }
+		public TerminalNode K_CONSTRAINT() { return getToken(SQLRulesParser.K_CONSTRAINT, 0); }
+		public TerminalNode K_TEMPORARY() { return getToken(SQLRulesParser.K_TEMPORARY, 0); }
+		public TerminalNode K_VIRTUAL() { return getToken(SQLRulesParser.K_VIRTUAL, 0); }
+		public TerminalNode K_AUTOINCREMENT() { return getToken(SQLRulesParser.K_AUTOINCREMENT, 0); }
+		public TerminalNode K_BEGIN() { return getToken(SQLRulesParser.K_BEGIN, 0); }
+		public TerminalNode K_OF() { return getToken(SQLRulesParser.K_OF, 0); }
+		public TerminalNode K_CROSS() { return getToken(SQLRulesParser.K_CROSS, 0); }
+		public TerminalNode K_CURRENT_DATE() { return getToken(SQLRulesParser.K_CURRENT_DATE, 0); }
+		public TerminalNode K_CREATE() { return getToken(SQLRulesParser.K_CREATE, 0); }
+		public TerminalNode K_IN() { return getToken(SQLRulesParser.K_IN, 0); }
+		public TerminalNode K_VALUES() { return getToken(SQLRulesParser.K_VALUES, 0); }
+		public TerminalNode K_UNION() { return getToken(SQLRulesParser.K_UNION, 0); }
+		public TerminalNode K_RAISE() { return getToken(SQLRulesParser.K_RAISE, 0); }
+		public TerminalNode K_ADD() { return getToken(SQLRulesParser.K_ADD, 0); }
+		public TerminalNode K_OFFSET() { return getToken(SQLRulesParser.K_OFFSET, 0); }
+		public TerminalNode K_REPLACE() { return getToken(SQLRulesParser.K_REPLACE, 0); }
+		public TerminalNode K_TRIGGER() { return getToken(SQLRulesParser.K_TRIGGER, 0); }
+		public TerminalNode K_SAVEPOINT() { return getToken(SQLRulesParser.K_SAVEPOINT, 0); }
+		public TerminalNode K_DATABASE() { return getToken(SQLRulesParser.K_DATABASE, 0); }
+		public TerminalNode K_INSERT() { return getToken(SQLRulesParser.K_INSERT, 0); }
+		public TerminalNode K_LIMIT() { return getToken(SQLRulesParser.K_LIMIT, 0); }
+		public TerminalNode K_COMMIT() { return getToken(SQLRulesParser.K_COMMIT, 0); }
+		public TerminalNode K_EXISTS() { return getToken(SQLRulesParser.K_EXISTS, 0); }
+		public TerminalNode K_CONFLICT() { return getToken(SQLRulesParser.K_CONFLICT, 0); }
+		public TerminalNode K_DESC() { return getToken(SQLRulesParser.K_DESC, 0); }
+		public TerminalNode K_TEMP() { return getToken(SQLRulesParser.K_TEMP, 0); }
+		public TerminalNode K_TO() { return getToken(SQLRulesParser.K_TO, 0); }
+		public TerminalNode K_TRANSACTION() { return getToken(SQLRulesParser.K_TRANSACTION, 0); }
+		public TerminalNode K_QUERY() { return getToken(SQLRulesParser.K_QUERY, 0); }
+		public TerminalNode K_IS() { return getToken(SQLRulesParser.K_IS, 0); }
+		public TerminalNode K_RELEASE() { return getToken(SQLRulesParser.K_RELEASE, 0); }
+		public TerminalNode K_DEFERRABLE() { return getToken(SQLRulesParser.K_DEFERRABLE, 0); }
+		public TerminalNode K_IGNORE() { return getToken(SQLRulesParser.K_IGNORE, 0); }
+		public TerminalNode K_SELECT() { return getToken(SQLRulesParser.K_SELECT, 0); }
+		public TerminalNode K_FOR() { return getToken(SQLRulesParser.K_FOR, 0); }
+		public TerminalNode K_EXCEPT() { return getToken(SQLRulesParser.K_EXCEPT, 0); }
+		public TerminalNode K_OR() { return getToken(SQLRulesParser.K_OR, 0); }
+		public TerminalNode K_BEFORE() { return getToken(SQLRulesParser.K_BEFORE, 0); }
+		public TerminalNode K_RENAME() { return getToken(SQLRulesParser.K_RENAME, 0); }
+		public TerminalNode K_INTO() { return getToken(SQLRulesParser.K_INTO, 0); }
+		public TerminalNode K_WHERE() { return getToken(SQLRulesParser.K_WHERE, 0); }
+		public TerminalNode K_INTERSECT() { return getToken(SQLRulesParser.K_INTERSECT, 0); }
+		public TerminalNode K_FROM() { return getToken(SQLRulesParser.K_FROM, 0); }
+		public TerminalNode K_EACH() { return getToken(SQLRulesParser.K_EACH, 0); }
+		public TerminalNode K_GLOB() { return getToken(SQLRulesParser.K_GLOB, 0); }
+		public TerminalNode K_ROLLBACK() { return getToken(SQLRulesParser.K_ROLLBACK, 0); }
+		public TerminalNode K_LEFT() { return getToken(SQLRulesParser.K_LEFT, 0); }
+		public TerminalNode K_FULL() { return getToken(SQLRulesParser.K_FULL, 0); }
+		public TerminalNode K_GROUP() { return getToken(SQLRulesParser.K_GROUP, 0); }
+		public TerminalNode K_REFERENCES() { return getToken(SQLRulesParser.K_REFERENCES, 0); }
+		public TerminalNode K_UPDATE() { return getToken(SQLRulesParser.K_UPDATE, 0); }
+		public TerminalNode K_ACTION() { return getToken(SQLRulesParser.K_ACTION, 0); }
+		public TerminalNode K_CURRENT_TIME() { return getToken(SQLRulesParser.K_CURRENT_TIME, 0); }
+		public TerminalNode K_END() { return getToken(SQLRulesParser.K_END, 0); }
+		public TerminalNode K_ASC() { return getToken(SQLRulesParser.K_ASC, 0); }
+		public TerminalNode K_THEN() { return getToken(SQLRulesParser.K_THEN, 0); }
+		public TerminalNode K_RESTRICT() { return getToken(SQLRulesParser.K_RESTRICT, 0); }
+		public TerminalNode K_FOREIGN() { return getToken(SQLRulesParser.K_FOREIGN, 0); }
+		public TerminalNode K_EXPLAIN() { return getToken(SQLRulesParser.K_EXPLAIN, 0); }
+		public TerminalNode K_INSTEAD() { return getToken(SQLRulesParser.K_INSTEAD, 0); }
+		public TerminalNode K_WITH() { return getToken(SQLRulesParser.K_WITH, 0); }
+		public TerminalNode K_ISNULL() { return getToken(SQLRulesParser.K_ISNULL, 0); }
+		public TerminalNode K_ORDER() { return getToken(SQLRulesParser.K_ORDER, 0); }
+		public TerminalNode K_OUTER() { return getToken(SQLRulesParser.K_OUTER, 0); }
+		public TerminalNode K_SET() { return getToken(SQLRulesParser.K_SET, 0); }
+		public TerminalNode K_UNIQUE() { return getToken(SQLRulesParser.K_UNIQUE, 0); }
+		public TerminalNode K_KEY() { return getToken(SQLRulesParser.K_KEY, 0); }
+		public TerminalNode K_CAST() { return getToken(SQLRulesParser.K_CAST, 0); }
+		public TerminalNode K_NO() { return getToken(SQLRulesParser.K_NO, 0); }
+		public TerminalNode K_AFTER() { return getToken(SQLRulesParser.K_AFTER, 0); }
+		public TerminalNode K_PLAN() { return getToken(SQLRulesParser.K_PLAN, 0); }
+		public TerminalNode K_ROW() { return getToken(SQLRulesParser.K_ROW, 0); }
+		public TerminalNode K_IMMEDIATE() { return getToken(SQLRulesParser.K_IMMEDIATE, 0); }
+		public TerminalNode K_PRIMARY() { return getToken(SQLRulesParser.K_PRIMARY, 0); }
+		public TerminalNode K_ON() { return getToken(SQLRulesParser.K_ON, 0); }
+		public TerminalNode K_DISTINCT() { return getToken(SQLRulesParser.K_DISTINCT, 0); }
+		public TerminalNode K_HAVING() { return getToken(SQLRulesParser.K_HAVING, 0); }
+		public TerminalNode K_ALTER() { return getToken(SQLRulesParser.K_ALTER, 0); }
+		public TerminalNode K_CURRENT_TIMESTAMP() { return getToken(SQLRulesParser.K_CURRENT_TIMESTAMP, 0); }
+		public TerminalNode K_NOTNULL() { return getToken(SQLRulesParser.K_NOTNULL, 0); }
+		public TerminalNode K_DEFAULT() { return getToken(SQLRulesParser.K_DEFAULT, 0); }
+		public TerminalNode K_INNER() { return getToken(SQLRulesParser.K_INNER, 0); }
+		public TerminalNode K_DELETE() { return getToken(SQLRulesParser.K_DELETE, 0); }
+		public TerminalNode K_RIGHT() { return getToken(SQLRulesParser.K_RIGHT, 0); }
+		public TerminalNode K_CASE() { return getToken(SQLRulesParser.K_CASE, 0); }
+		public TerminalNode K_MATCH() { return getToken(SQLRulesParser.K_MATCH, 0); }
+		public TerminalNode K_INITIALLY() { return getToken(SQLRulesParser.K_INITIALLY, 0); }
+		public TerminalNode K_EXCLUSIVE() { return getToken(SQLRulesParser.K_EXCLUSIVE, 0); }
+		public TerminalNode K_CHECK() { return getToken(SQLRulesParser.K_CHECK, 0); }
+		public TerminalNode K_NULL() { return getToken(SQLRulesParser.K_NULL, 0); }
+		public TerminalNode K_REINDEX() { return getToken(SQLRulesParser.K_REINDEX, 0); }
+		public TerminalNode K_BY() { return getToken(SQLRulesParser.K_BY, 0); }
+		public TerminalNode K_ABORT() { return getToken(SQLRulesParser.K_ABORT, 0); }
+		public TerminalNode K_WHEN() { return getToken(SQLRulesParser.K_WHEN, 0); }
+		public TerminalNode K_BETWEEN() { return getToken(SQLRulesParser.K_BETWEEN, 0); }
+		public TerminalNode K_REGEXP() { return getToken(SQLRulesParser.K_REGEXP, 0); }
+		public TerminalNode K_IF() { return getToken(SQLRulesParser.K_IF, 0); }
+		public TerminalNode K_TABLE() { return getToken(SQLRulesParser.K_TABLE, 0); }
+		public TerminalNode K_LIKE() { return getToken(SQLRulesParser.K_LIKE, 0); }
+		public TerminalNode K_DEFERRED() { return getToken(SQLRulesParser.K_DEFERRED, 0); }
+		public TerminalNode K_ANALYZE() { return getToken(SQLRulesParser.K_ANALYZE, 0); }
+		public TerminalNode K_JOIN() { return getToken(SQLRulesParser.K_JOIN, 0); }
+		public TerminalNode K_FAIL() { return getToken(SQLRulesParser.K_FAIL, 0); }
+		public TerminalNode K_PRAGMA() { return getToken(SQLRulesParser.K_PRAGMA, 0); }
+		public TerminalNode K_INDEX() { return getToken(SQLRulesParser.K_INDEX, 0); }
+		public TerminalNode K_AS() { return getToken(SQLRulesParser.K_AS, 0); }
+		public TerminalNode K_ELSE() { return getToken(SQLRulesParser.K_ELSE, 0); }
+		public TerminalNode K_ALL() { return getToken(SQLRulesParser.K_ALL, 0); }
+		public TerminalNode K_ATTACH() { return getToken(SQLRulesParser.K_ATTACH, 0); }
+		public TerminalNode K_AND() { return getToken(SQLRulesParser.K_AND, 0); }
+		public TerminalNode K_USING() { return getToken(SQLRulesParser.K_USING, 0); }
+		public TerminalNode K_WITHOUT() { return getToken(SQLRulesParser.K_WITHOUT, 0); }
+		public TerminalNode K_NATURAL() { return getToken(SQLRulesParser.K_NATURAL, 0); }
+		public TerminalNode K_NOT() { return getToken(SQLRulesParser.K_NOT, 0); }
+		public TerminalNode K_ESCAPE() { return getToken(SQLRulesParser.K_ESCAPE, 0); }
 		public KeywordContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_keyword; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterKeyword(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterKeyword(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitKeyword(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitKeyword(this);
 		}
 	}
 
@@ -7620,11 +7621,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_name; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterName(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterName(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitName(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitName(this);
 		}
 	}
 
@@ -7658,11 +7659,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_function_name; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterFunction_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterFunction_name(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitFunction_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitFunction_name(this);
 		}
 	}
 
@@ -7687,18 +7688,18 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Database_nameContext extends ParserRuleContext {
-		public TerminalNode IDENTIFIER() { return getToken(SQLite2Parser.IDENTIFIER, 0); }
+		public TerminalNode IDENTIFIER() { return getToken(SQLRulesParser.IDENTIFIER, 0); }
 		public Database_nameContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_database_name; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterDatabase_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterDatabase_name(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitDatabase_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitDatabase_name(this);
 		}
 	}
 
@@ -7732,11 +7733,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_schema_name; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterSchema_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterSchema_name(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitSchema_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitSchema_name(this);
 		}
 	}
 
@@ -7770,11 +7771,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_table_function_name; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterTable_function_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterTable_function_name(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitTable_function_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitTable_function_name(this);
 		}
 	}
 
@@ -7799,18 +7800,18 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Table_nameContext extends ParserRuleContext {
-		public TerminalNode IDENTIFIER() { return getToken(SQLite2Parser.IDENTIFIER, 0); }
+		public TerminalNode IDENTIFIER() { return getToken(SQLRulesParser.IDENTIFIER, 0); }
 		public Table_nameContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_table_name; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterTable_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterTable_name(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitTable_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitTable_name(this);
 		}
 	}
 
@@ -7844,11 +7845,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_table_or_index_name; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterTable_or_index_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterTable_or_index_name(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitTable_or_index_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitTable_or_index_name(this);
 		}
 	}
 
@@ -7882,11 +7883,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_new_table_name; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterNew_table_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterNew_table_name(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitNew_table_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitNew_table_name(this);
 		}
 	}
 
@@ -7911,18 +7912,18 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Column_nameContext extends ParserRuleContext {
-		public TerminalNode IDENTIFIER() { return getToken(SQLite2Parser.IDENTIFIER, 0); }
+		public TerminalNode IDENTIFIER() { return getToken(SQLRulesParser.IDENTIFIER, 0); }
 		public Column_nameContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_column_name; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterColumn_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterColumn_name(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitColumn_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitColumn_name(this);
 		}
 	}
 
@@ -7956,11 +7957,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_collation_name; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterCollation_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterCollation_name(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitCollation_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitCollation_name(this);
 		}
 	}
 
@@ -7994,11 +7995,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_foreign_table; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterForeign_table(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterForeign_table(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitForeign_table(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitForeign_table(this);
 		}
 	}
 
@@ -8032,11 +8033,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_index_name; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterIndex_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterIndex_name(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitIndex_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitIndex_name(this);
 		}
 	}
 
@@ -8070,11 +8071,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_trigger_name; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterTrigger_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterTrigger_name(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitTrigger_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitTrigger_name(this);
 		}
 	}
 
@@ -8108,11 +8109,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_view_name; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterView_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterView_name(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitView_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitView_name(this);
 		}
 	}
 
@@ -8146,11 +8147,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_module_name; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterModule_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterModule_name(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitModule_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitModule_name(this);
 		}
 	}
 
@@ -8184,11 +8185,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_pragma_name; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterPragma_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterPragma_name(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitPragma_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitPragma_name(this);
 		}
 	}
 
@@ -8222,11 +8223,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_savepoint_name; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterSavepoint_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterSavepoint_name(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitSavepoint_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitSavepoint_name(this);
 		}
 	}
 
@@ -8251,8 +8252,8 @@ public class SQLite2Parser extends Parser {
 	}
 
 	public static class Table_aliasContext extends ParserRuleContext {
-		public TerminalNode STRING_LITERAL() { return getToken(SQLite2Parser.STRING_LITERAL, 0); }
-		public TerminalNode IDENTIFIER() { return getToken(SQLite2Parser.IDENTIFIER, 0); }
+		public TerminalNode STRING_LITERAL() { return getToken(SQLRulesParser.STRING_LITERAL, 0); }
+		public TerminalNode IDENTIFIER() { return getToken(SQLRulesParser.IDENTIFIER, 0); }
 		public Table_aliasContext table_alias() {
 			return getRuleContext(Table_aliasContext.class,0);
 		}
@@ -8262,11 +8263,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_table_alias; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterTable_alias(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterTable_alias(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitTable_alias(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitTable_alias(this);
 		}
 	}
 
@@ -8321,11 +8322,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_transaction_name; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterTransaction_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterTransaction_name(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitTransaction_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitTransaction_name(this);
 		}
 	}
 
@@ -8356,18 +8357,18 @@ public class SQLite2Parser extends Parser {
 		public Any_nameContext any_name() {
 			return getRuleContext(Any_nameContext.class,0);
 		}
-		public TerminalNode IDENTIFIER() { return getToken(SQLite2Parser.IDENTIFIER, 0); }
+		public TerminalNode IDENTIFIER() { return getToken(SQLRulesParser.IDENTIFIER, 0); }
 		public Any_nameContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_any_name; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterAny_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterAny_name(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitAny_name(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitAny_name(this);
 		}
 	}
 
@@ -8542,11 +8543,11 @@ public class SQLite2Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_comparing_operators; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).enterComparing_operators(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).enterComparing_operators(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SQLite2Listener ) ((SQLite2Listener)listener).exitComparing_operators(this);
+			if ( listener instanceof SQLRulesListener ) ((SQLRulesListener)listener).exitComparing_operators(this);
 		}
 	}
 
@@ -8559,7 +8560,7 @@ public class SQLite2Parser extends Parser {
 			{
 			setState(1686);
 			_la = _input.LA(1);
-			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << LT) | (1L << LT_EQ) | (1L << GT) | (1L << GT_EQ) | (1L << EQ) | (1L << NOT_EQ1))) != 0)) ) {
+			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << ASSIGN) | (1L << LT) | (1L << LT_EQ) | (1L << GT) | (1L << GT_EQ) | (1L << NOT_EQ1))) != 0)) ) {
 			_errHandler.recoverInline(this);
 			}
 			consume();
@@ -8742,24 +8743,24 @@ public class SQLite2Parser extends Parser {
 		"\u00a4\u00a6\u00a8\u00aa\2\24\5\2<<GGTT\4\2\61\61DD\4\2\7\7ll\3\2\u0085"+
 		"\u0086\4\2\37\37@@\4\2$$>>\7\2\33\33JJSS||\177\177\4\2\t\t\16\17\3\2\n"+
 		"\13\3\2\20\23\6\2OOcceexx\4\2==\u008d\u008d\5\2\33\33JJ\177\177\6\2\66"+
-		"8jj\u0099\u0099\u009b\u009c\4\2\n\fhh\4\2\u0097\u0097\u009b\u009b\3\2"+
-		"\33\u0096\3\2\24\31\u0796\2\u00b0\3\2\2\2\4\u00b5\3\2\2\2\6\u00bb\3\2"+
-		"\2\2\b\u00d5\3\2\2\2\n\u00f7\3\2\2\2\f\u0109\3\2\2\2\16\u0112\3\2\2\2"+
-		"\20\u011a\3\2\2\2\22\u0124\3\2\2\2\24\u012c\3\2\2\2\26\u0150\3\2\2\2\30"+
-		"\u0170\3\2\2\2\32\u0199\3\2\2\2\34\u01de\3\2\2\2\36\u01f1\3\2\2\2 \u020f"+
-		"\3\2\2\2\"\u0219\3\2\2\2$\u0236\3\2\2\2&\u023c\3\2\2\2(\u0249\3\2\2\2"+
-		"*\u0256\3\2\2\2,\u0263\3\2\2\2.\u0271\3\2\2\2\60\u0291\3\2\2\2\62\u02db"+
-		"\3\2\2\2\64\u02ea\3\2\2\2\66\u02f7\3\2\2\28\u02fd\3\2\2\2:\u030b\3\2\2"+
-		"\2<\u030f\3\2\2\2>\u0327\3\2\2\2@\u0390\3\2\2\2B\u0393\3\2\2\2D\u03b6"+
-		"\3\2\2\2F\u03ec\3\2\2\2H\u03ee\3\2\2\2J\u03f9\3\2\2\2L\u040b\3\2\2\2N"+
-		"\u0433\3\2\2\2P\u0478\3\2\2\2R\u04da\3\2\2\2T\u04de\3\2\2\2V\u050e\3\2"+
-		"\2\2X\u0518\3\2\2\2Z\u0522\3\2\2\2\\\u054a\3\2\2\2^\u0559\3\2\2\2`\u0563"+
-		"\3\2\2\2b\u056e\3\2\2\2d\u0570\3\2\2\2f\u058f\3\2\2\2h\u05d3\3\2\2\2j"+
-		"\u05d5\3\2\2\2l\u05ec\3\2\2\2n\u05fc\3\2\2\2p\u0648\3\2\2\2r\u064f\3\2"+
-		"\2\2t\u0652\3\2\2\2v\u0656\3\2\2\2x\u0658\3\2\2\2z\u065a\3\2\2\2|\u065e"+
-		"\3\2\2\2~\u0660\3\2\2\2\u0080\u0662\3\2\2\2\u0082\u0664\3\2\2\2\u0084"+
-		"\u0666\3\2\2\2\u0086\u0668\3\2\2\2\u0088\u066a\3\2\2\2\u008a\u066c\3\2"+
-		"\2\2\u008c\u066e\3\2\2\2\u008e\u0670\3\2\2\2\u0090\u0672\3\2\2\2\u0092"+
+		"8jj\u0099\u0099\u009c\u009c\4\2\n\fhh\4\2\u0097\u0097\u009b\u009b\3\2"+
+		"\33\u0096\5\2\b\b\24\27\31\31\u0796\2\u00b0\3\2\2\2\4\u00b5\3\2\2\2\6"+
+		"\u00bb\3\2\2\2\b\u00d5\3\2\2\2\n\u00f7\3\2\2\2\f\u0109\3\2\2\2\16\u0112"+
+		"\3\2\2\2\20\u011a\3\2\2\2\22\u0124\3\2\2\2\24\u012c\3\2\2\2\26\u0150\3"+
+		"\2\2\2\30\u0170\3\2\2\2\32\u0199\3\2\2\2\34\u01de\3\2\2\2\36\u01f1\3\2"+
+		"\2\2 \u020f\3\2\2\2\"\u0219\3\2\2\2$\u0236\3\2\2\2&\u023c\3\2\2\2(\u0249"+
+		"\3\2\2\2*\u0256\3\2\2\2,\u0263\3\2\2\2.\u0271\3\2\2\2\60\u0291\3\2\2\2"+
+		"\62\u02db\3\2\2\2\64\u02ea\3\2\2\2\66\u02f7\3\2\2\28\u02fd\3\2\2\2:\u030b"+
+		"\3\2\2\2<\u030f\3\2\2\2>\u0327\3\2\2\2@\u0390\3\2\2\2B\u0393\3\2\2\2D"+
+		"\u03b6\3\2\2\2F\u03ec\3\2\2\2H\u03ee\3\2\2\2J\u03f9\3\2\2\2L\u040b\3\2"+
+		"\2\2N\u0433\3\2\2\2P\u0478\3\2\2\2R\u04da\3\2\2\2T\u04de\3\2\2\2V\u050e"+
+		"\3\2\2\2X\u0518\3\2\2\2Z\u0522\3\2\2\2\\\u054a\3\2\2\2^\u0559\3\2\2\2"+
+		"`\u0563\3\2\2\2b\u056e\3\2\2\2d\u0570\3\2\2\2f\u058f\3\2\2\2h\u05d3\3"+
+		"\2\2\2j\u05d5\3\2\2\2l\u05ec\3\2\2\2n\u05fc\3\2\2\2p\u0648\3\2\2\2r\u064f"+
+		"\3\2\2\2t\u0652\3\2\2\2v\u0656\3\2\2\2x\u0658\3\2\2\2z\u065a\3\2\2\2|"+
+		"\u065e\3\2\2\2~\u0660\3\2\2\2\u0080\u0662\3\2\2\2\u0082\u0664\3\2\2\2"+
+		"\u0084\u0666\3\2\2\2\u0086\u0668\3\2\2\2\u0088\u066a\3\2\2\2\u008a\u066c"+
+		"\3\2\2\2\u008c\u066e\3\2\2\2\u008e\u0670\3\2\2\2\u0090\u0672\3\2\2\2\u0092"+
 		"\u0674\3\2\2\2\u0094\u0676\3\2\2\2\u0096\u0678\3\2\2\2\u0098\u067a\3\2"+
 		"\2\2\u009a\u067c\3\2\2\2\u009c\u067e\3\2\2\2\u009e\u0680\3\2\2\2\u00a0"+
 		"\u0682\3\2\2\2\u00a2\u0684\3\2\2\2\u00a4\u068c\3\2\2\2\u00a6\u068e\3\2"+
