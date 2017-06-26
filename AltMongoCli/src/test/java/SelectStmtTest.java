@@ -1,7 +1,6 @@
 import exceptions.DatabaseNotSelectedException;
 import mongo.MongodbHelper;
 import org.bson.Document;
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -48,7 +47,7 @@ public class SelectStmtTest {
         convertedCustomers.clear();
 
         //insure that collection not exists
-        mongodbHelper.useDB("test");
+        mongodbHelper.useDB(testDbName);
         mongodbHelper.dropCollection(testCollectionName);
 
         List<Document> customers = new ArrayList<>();
@@ -91,8 +90,15 @@ public class SelectStmtTest {
 
     @Test
     public void testSelectCompoundCondition() {
-        List<String> r = shell.select("* from "+testCollectionName + " where (age > 18 or name == \"Ivan\") and (credit_card.name = \"Visa\" or credit_card.name = \"Master Card\")");
+        List<String> r = shell.select("* from "+testCollectionName + " where (age > 18 or name == \"Ivan\") and (credit_card.name == \"Visa\" or credit_card.name == \"Master Card\")");
 
-        assertEquals(Arrays.asList(dima.toString(), stepan.toString(), ivan.toString()), r);
+        assertEquals(Arrays.asList(dima.toString(), ivan.toString()), r);
+    }
+
+    @Test
+    public void testSelectRevertedStringValuesConditions() {
+        List<String> r = shell.select("* from "+testCollectionName + " where \"Dima\"== name or \"Master Card\" == credit_card.name");
+
+        assertEquals(Arrays.asList(dima.toString()), r);
     }
 }
