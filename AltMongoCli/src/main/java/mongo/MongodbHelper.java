@@ -32,8 +32,28 @@ public class MongodbHelper {
         return instance;
     }
 
-    public void useDB(final String dbName) {
+    public String useDB(final String dbName) throws IllegalArgumentException{
         currentDB = mongoClient.getDatabase(dbName);
+        return currentDB.getName();
+    }
+
+    public String dropDb(final String dbName) {
+        return null;
+    }
+
+    public void dropCollection(final String collectionName) throws DatabaseNotSelectedException {
+        if (currentDB == null) throw new DatabaseNotSelectedException();
+        currentDB.getCollection(collectionName).drop();
+    }
+
+    public void insert(final String collectionName, final Document document) throws DatabaseNotSelectedException {
+        if (currentDB == null) throw new DatabaseNotSelectedException();
+        currentDB.getCollection(collectionName).insertOne(document);
+    }
+
+    public void insertMany(final String collectionName, final List<Document> documents) throws DatabaseNotSelectedException {
+        if (currentDB == null) throw new DatabaseNotSelectedException();
+        currentDB.getCollection(collectionName).insertMany(documents);
     }
 
     public List<String> listCollectionsNames () throws DatabaseNotSelectedException {

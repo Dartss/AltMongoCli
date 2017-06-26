@@ -10,12 +10,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MongoShell {
+
     @Command(name = "use")
     public String use(String dbName){
         try {
-            MongodbHelper.getInstance().useDB(dbName);
+            dbName = MongodbHelper.getInstance().useDB(dbName);
         } catch (IllegalArgumentException e) {
-            return "Wrong DB name";
+            return "Wrong DB name : " + dbName;
         }
         return "Switched to db " + dbName;
     }
@@ -64,7 +65,7 @@ public class MongoShell {
                 .replace("\0", " %s ");
         //Stupid, I know, but parser.antlr lexer was made to recognize 'select' word
         String inputString = "select " + String.format(format, args);
-
+        System.out.println("INPUT " + inputString);
         //Initialize select statement parser
         SQLStatementParser parser = SelectStmtParser.getInstance();
         ParsedSQLStatement parsedStatement = parser.parse(inputString);
