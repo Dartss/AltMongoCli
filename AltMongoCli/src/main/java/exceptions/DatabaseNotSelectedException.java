@@ -1,3 +1,4 @@
+package exceptions;
 
 public class DatabaseNotSelectedException extends Throwable {
     public DatabaseNotSelectedException() {

@@ -1,3 +1,5 @@
+package parser;
+
 import model.ParsedSQLStatement;
 
 public interface SQLStatementParser {

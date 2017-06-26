@@ -1,10 +1,10 @@
+package mongo;
+
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
-import model.CompoundCondition;
-import model.Condition;
-import model.SimpleCondition;
+import exceptions.DatabaseNotSelectedException;
 import model.ParsedSQLStatement;
 import org.bson.Document;
 import org.bson.conversions.Bson;
@@ -12,9 +12,9 @@ import org.bson.conversions.Bson;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.mongodb.client.model.Filters.*;
-
 public class MongodbHelper {
+    private static final String ASTERISK = "*";
+
     private final MongoClient mongoClient;
     private MongoDatabase currentDB;
     private static MongodbHelper instance = null;
@@ -59,7 +59,10 @@ public class MongodbHelper {
     public List<String> getDocuments(ParsedSQLStatement selectStatement) throws DatabaseNotSelectedException {
         List<String> resultDocuments = new ArrayList<>();
 
-        Bson query = generateQuery(selectStatement);
+        Bson query = null;
+        if (selectStatement.getConditions() != null)
+            query = selectStatement.getConditions().get(0);
+
         Document projections = generateProjections(selectStatement);
         MongoCursor c;
 
@@ -72,6 +75,7 @@ public class MongodbHelper {
         } else {
             c = getCollection(selectStatement.getTarget()).find().iterator();
         }
+
         while(c.hasNext()) {
             resultDocuments.add(c.next().toString());
         }
@@ -79,7 +83,7 @@ public class MongodbHelper {
     }
 
     private Document generateProjections(ParsedSQLStatement selectStatement) {
-        if (selectStatement.getProjections().contains(Constants.ASTERISK)) return null;
+        if (selectStatement.getProjections().contains(ASTERISK)) return null;
 
         Document projections = null;
 
@@ -95,15 +99,6 @@ public class MongodbHelper {
         return projections;
     }
 
-    private Bson generateQuery(ParsedSQLStatement selectStatement) {
-        Bson query = null;
-        if (selectStatement.getConditions() != null)
-        {
-            
-        }
-        return query;
-    }
-
     private MongoCollection getCollection(String name) throws DatabaseNotSelectedException {
         if(currentDB == null) throw new DatabaseNotSelectedException();
 
@@ -115,28 +110,4 @@ public class MongodbHelper {
         return this.currentDB;
     }
 
-    private Bson getBsonByOperator(Condition condition) {
-        Bson query = null;
-        switch (condition.getOperator()) {
-            case ("=="):
-                query = eq(condition.getColumnName(), condition.getExpression());
-                break;
-            case ("!="):
-                query = ne(condition.getColumnName(), condition.getExpression());
-                break;
-            case (">"):
-                query = gt(condition.getColumnName(), condition.getExpression());
-                break;
-            case ("<="):
-                query = lte(condition.getColumnName(), condition.getExpression());
-                break;
-            case (">="):
-                query = gte(condition.getColumnName(), condition.getExpression());
-                break;
-            case ("<"):
-                query = lt(condition.getColumnName(), condition.getExpression());
-                break;
-        }
-        return query;
-    }
 }

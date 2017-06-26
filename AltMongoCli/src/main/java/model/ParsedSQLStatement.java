@@ -1,14 +1,16 @@
 package model;
 
+import org.bson.conversions.Bson;
+
 import java.util.List;
 
 public class ParsedSQLStatement {
     private final String target;
-    private final List<Condition> conditions;
+    private final List<Bson> conditions;
     private final List<String> projections;
     private final int limit;
 
-    public ParsedSQLStatement(String target, List<Condition> conditions, List<String> projections, int limit) {
+    public ParsedSQLStatement(String target, List<Bson> conditions, List<String> projections, int limit) {
         this.target = target;
         this.conditions = conditions;
         this.projections = projections;
@@ -19,7 +21,7 @@ public class ParsedSQLStatement {
         return target;
     }
 
-    public List<Condition> getConditions() {
+    public List<Bson> getConditions() {
         return conditions;
     }
 

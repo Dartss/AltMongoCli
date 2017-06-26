@@ -1,6 +1,10 @@
 import asg.cliche.Command;
 import com.mongodb.client.MongoCollection;
+import exceptions.DatabaseNotSelectedException;
 import model.ParsedSQLStatement;
+import mongo.MongodbHelper;
+import parser.SQLStatementParser;
+import parser.SelectStmtParser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -55,10 +59,13 @@ public class MongoShell {
     @Command(name="select")
     public List<String> select(String... args)
     {
+        //Initialize input string from array
         String format = new String(new char[args.length])
                 .replace("\0", " %s ");
+        //Stupid, I know, but parser.antlr lexer was made to recognize 'select' word
         String inputString = "select " + String.format(format, args);
 
+        //Initialize select statement parser
         SQLStatementParser parser = SelectStmtParser.getInstance();
         ParsedSQLStatement parsedStatement = parser.parse(inputString);
         List<String> results = new ArrayList<>();
