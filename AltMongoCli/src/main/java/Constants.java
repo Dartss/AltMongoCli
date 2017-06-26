@@ -2,6 +2,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Constants {
+    public static final String ASTERISK = "*";
+
     private static Map<String, String> operations = null;
 
     public  static Map<String, String> getOperations() {
@@ -12,6 +14,7 @@ public class Constants {
             operations.put("<", "$lt");
             operations.put("<=", "$lte");
             operations.put("=", "$eq");
+            operations.put("!=", "$ne");
         }
 
         return operations;

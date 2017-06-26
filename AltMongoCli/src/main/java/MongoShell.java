@@ -1,6 +1,6 @@
 import asg.cliche.Command;
 import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoCursor;
+import model.ParsedSQLStatement;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,10 +59,16 @@ public class MongoShell {
                 .replace("\0", " %s ");
         String inputString = "select " + String.format(format, args);
 
-        return SelectCommandParser.getInstance().parseSelect(inputString);
-    }
+        SQLStatementParser parser = SelectStmtParser.getInstance();
+        ParsedSQLStatement parsedStatement = parser.parse(inputString);
+        List<String> results = new ArrayList<>();
 
-    @Command public void computeFrequencies(StringBuilder text) {
-        System.out.println(text.toString());
+        try {
+            results = MongodbHelper.getInstance().getDocuments(parsedStatement);
+        } catch (DatabaseNotSelectedException e) {
+            results.add(e.getMessage());
+        }
+
+        return results;
     }
 }
